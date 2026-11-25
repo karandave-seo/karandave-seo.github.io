@@ -305,6 +305,31 @@
       font-size: 0.95rem;
     }
 
+    .case-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-top: 0.9rem;
+    }
+
+    .case-box {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 0.85rem 1rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .case-box strong {
+      color: var(--ink);
+      display: block;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+    }
+
     .off-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -343,7 +368,7 @@
 
     @media (max-width: 860px) {
       .span-8, .span-6, .span-4 { grid-column: span 12; }
-      .metrics-row, .off-grid { grid-template-columns: 1fr; }
+      .metrics-row, .case-points, .off-grid { grid-template-columns: 1fr; }
       .top-links a:not(.pill-cta) { display: none; }
     }
   </style>
@@ -354,7 +379,7 @@
       <a href="#" class="brand">Karan Dave</a>
       <nav class="top-links">
         <a href="#work">Work</a>
-        <a href="#research">EV Study</a>
+        <a href="#research">Case Study</a>
         <a href="#offclock">Off the Clock</a>
         <a href="https://www.linkedin.com/in/karan-dave-984a883a8/" target="_blank" rel="noopener noreferrer" class="pill-cta">LinkedIn</a>
       </nav>
@@ -371,7 +396,7 @@
           </p>
         </div>
         <div>
-          <a href="#research" class="btn">Read EV Study</a>
+          <a href="#research" class="btn">Read Case Study</a>
           <a href="#playbook" class="btn btn-outline">SEO On-Page Playbook</a>
         </div>
       </section>
@@ -446,14 +471,28 @@
         </div>
       </section>
 
-      <!-- Featured EV Research Tile -->
+      <!-- Featured Case Study Tile -->
       <section id="research" class="tile span-12">
-        <span class="eyebrow">Featured Research &bull; Ahmedabad</span>
-        <h2>Electric Two-Wheeler Adoption Study</h2>
-        <p class="quote">“Factors influencing consumer purchase of electric vehicles in the two-wheeler segment in Ahmedabad.”</p>
-        <p style="font-size: 0.95rem;">
-          <strong>Core Finding:</strong> Environmental benefits help, but service-network reliability and battery longevity transparency are what actually move petrol-bike buyers in Gujarat.
+        <span class="eyebrow">Featured Case Study &bull; Strategic AI &amp; Marketing</span>
+        <h2>Integration of AI in Marketing</h2>
+        <p class="quote">“How distinct AI-driven business models shape marketing strategy across Meta Platforms, Amazon, Spotify, and Netflix.”</p>
+        <p style="font-size: 0.95rem; margin-bottom: 0.35rem;">
+          <strong>Core Takeaway:</strong> Long-term marketing advantage comes not merely from adopting AI, but from aligning specific AI capabilities—mapped across Mechanical, Thinking, and Feeling AI—with core business objectives while addressing market competition and ethics.
         </p>
+        <div class="case-points">
+          <div class="case-box">
+            <strong>Advertising Model (Meta)</strong>
+            Optimizes third-party advertiser ROI through hyper-targeted audience segmentation.
+          </div>
+          <div class="case-box">
+            <strong>Retail Engine (Amazon)</strong>
+            Drives retail conversions by personalizing the end-to-end customer journey.
+          </div>
+          <div class="case-box">
+            <strong>Subscription Retention (Spotify &amp; Netflix)</strong>
+            Boosts content discovery and engagement to reduce churn and protect recurring revenue.
+          </div>
+        </div>
       </section>
 
       <!-- Beyond the Data Tile -->
