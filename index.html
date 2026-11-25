@@ -3,10 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Karan Dave — SEO, Analytics & Market Research</title>
+  <title>Karan Dave — SEO, Analytics &amp; Market Research</title>
+  <meta name="description" content="Portfolio of Karan Dave — SEO Trainee at SHALIGRAM, BBA student at Indus University, and market researcher based in Ahmedabad, Gujarat." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://karandave-seo.github.io/" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://karandave-seo.github.io/" />
+  <meta property="og:title" content="Karan Dave — SEO, Analytics &amp; Market Research" />
+  <meta property="og:description" content="Turning search intent and market data into growth. SEO Trainee at SHALIGRAM &bull; BBA at Indus University &bull; Ahmedabad." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Structured Data (Person Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Karan Dave",
+    "url": "https://karandave-seo.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/karan-dave-984a883a8/"
+    ],
+    "jobTitle": "SEO Trainee",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "SHALIGRAM",
+      "url": "https://www.shaligram.io/"
+    },
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Indus University"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ahmedabad",
+      "addressRegion": "Gujarat",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+
   <style>
     :root {
       --paper: #f6f5f0;
@@ -165,6 +205,14 @@
       font-weight: 700;
     }
 
+    .anchor-link {
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .anchor-link:hover { color: var(--accent); }
+
     /* Metrics inside Lime Tile */
     .metrics-row {
       display: grid;
@@ -227,11 +275,35 @@
       font-weight: 600;
     }
 
+    /* Footer */
     footer {
       margin-top: 1rem;
-      text-align: center;
+      padding: 0.85rem 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
       font-size: 0.85rem;
       color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+    }
+
+    .footer-links a {
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .footer-links a:hover {
+      border-bottom-color: var(--ink);
     }
 
     @media (max-width: 860px) {
@@ -249,7 +321,7 @@
         <a href="#work">Work</a>
         <a href="#research">EV Study</a>
         <a href="#offclock">Off the Clock</a>
-        <a href="https://www.linkedin.com" target="_blank" class="pill-cta">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/karan-dave-984a883a8/" target="_blank" rel="noopener noreferrer" class="pill-cta">LinkedIn</a>
       </nav>
     </header>
 
@@ -275,7 +347,7 @@
           </li>
           <li>
             <span class="anchor-label">Current Role</span>
-            <strong>SHALIGRAM</strong> (SEO Trainee)
+            <a href="https://www.shaligram.io/" target="_blank" rel="noopener noreferrer" class="anchor-link"><strong>SHALIGRAM</strong></a> (SEO Trainee)
           </li>
           <li>
             <span class="anchor-label">Education</span>
@@ -341,7 +413,13 @@
     </main>
 
     <footer>
-      Karan Dave &bull; SHALIGRAM &bull; Ahmedabad
+      <div>
+        Karan Dave &bull; <a href="https://www.shaligram.io/" target="_blank" rel="noopener noreferrer" style="color: inherit; font-weight: 600; text-decoration: underline;">SHALIGRAM</a> &bull; Ahmedabad
+      </div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/karan-dave-984a883a8/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.shaligram.io/" target="_blank" rel="noopener noreferrer">SHALIGRAM</a>
+      </div>
     </footer>
   </div>
 </body>
