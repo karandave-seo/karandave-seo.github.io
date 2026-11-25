@@ -233,6 +233,32 @@
       font-weight: 600;
     }
 
+    /* What I Do Stack */
+    .skill-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 0.85rem;
+    }
+
+    .skill-row {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 0.8rem 1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .skill-row strong {
+      color: var(--ink);
+      display: block;
+      font-size: 0.84rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.2rem;
+    }
+
     .btn {
       display: inline-block;
       text-decoration: none;
@@ -372,12 +398,21 @@
       <!-- Capabilities Tile -->
       <section class="tile span-6">
         <span class="eyebrow">What I Do</span>
-        <h2>SEO, Business &amp; Consumer Insights</h2>
-        <p style="color: var(--muted); font-size: 0.94rem;">
-          <strong>SEO:</strong> Technical audits, keyword mapping, and on-page optimization.<br />
-          <strong>Business Analysis:</strong> BBA-backed trend &amp; funnel evaluation.<br />
-          <strong>Market Research:</strong> Primary surveys &amp; local buyer behavior.
-        </p>
+        <h2>SEO, B2B Content &amp; Web Analytics</h2>
+        <div class="skill-stack">
+          <div class="skill-row">
+            <strong>Technical SEO</strong>
+            Audits, sitemaps, indexing, and Google Business Profile optimization.
+          </div>
+          <div class="skill-row">
+            <strong>On-Page &amp; Copy</strong>
+            Keyword clustering, B2B service pages, case studies, and HTML structure.
+          </div>
+          <div class="skill-row">
+            <strong>Analytics &amp; CMS</strong>
+            GSC, GA4, and Semrush tracking across Odoo and WordPress.
+          </div>
+        </div>
       </section>
 
       <!-- Featured EV Research Tile -->
