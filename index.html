@@ -75,16 +75,27 @@
       margin: 0 auto;
     }
 
-    /* Top Bar */
+    /* Sticky Scroll-Frosted Top Bar */
     .topbar {
+      position: sticky;
+      top: 0.75rem;
+      z-index: 50;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: var(--tile);
+      background: rgba(255, 255, 255, 1);
+      backdrop-filter: blur(0px);
+      -webkit-backdrop-filter: blur(0px);
       border: 1px solid var(--line);
       border-radius: 18px;
       padding: 0.9rem 1.4rem;
       margin-bottom: 1rem;
+      transition: box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .topbar.is-scrolled {
+      box-shadow: 0 10px 30px -12px rgba(20, 33, 29, 0.14);
+      border-color: rgba(20, 33, 29, 0.14);
     }
 
     .brand {
@@ -125,6 +136,7 @@
     }
 
     .tile {
+      scroll-margin-top: 5.5rem;
       background: var(--tile);
       border: 1px solid var(--line);
       border-radius: 22px;
@@ -292,12 +304,6 @@
       margin-top: 0.25rem;
     }
 
-    .btn-outline {
-      background: transparent;
-      color: var(--ink);
-      border: 1px solid var(--line);
-    }
-
     .quote {
       font-style: italic;
       color: var(--muted);
@@ -375,7 +381,7 @@
 </head>
 <body>
   <div class="bento-wrap">
-    <header class="topbar">
+    <header class="topbar" id="topbar">
       <a href="#" class="brand">Karan Dave</a>
       <nav class="top-links">
         <a href="#work">Work</a>
@@ -513,5 +519,25 @@
       Ahmedabad
     </footer>
   </div>
+
+  <script>
+    const topbar = document.getElementById('topbar');
+    const maxScroll = 140; // pixels to reach full frosted translucency
+    const minAlpha = 0.78; // floor opacity so text stays crisp and readable
+
+    function updateTopbarOnScroll() {
+      const progress = Math.min(window.scrollY / maxScroll, 1);
+      const alpha = 1 - progress * (1 - minAlpha);
+      const blur = progress * 12;
+
+      topbar.style.background = `rgba(255, 255, 255, ${alpha.toFixed(3)})`;
+      topbar.style.backdropFilter = `blur(${blur.toFixed(1)}px)`;
+      topbar.style.webkitBackdropFilter = `blur(${blur.toFixed(1)}px)`;
+      topbar.classList.toggle('is-scrolled', window.scrollY > 8);
+    }
+
+    window.addEventListener('scroll', updateTopbarOnScroll, { passive: true });
+    updateTopbarOnScroll();
+  </script>
 </body>
 </html>
