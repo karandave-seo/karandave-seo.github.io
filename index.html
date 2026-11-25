@@ -137,7 +137,7 @@
       max-width: 56ch;
     }
 
-    /* Static Anchors List */
+    /* At a Glance List */
     .anchor-list {
       list-style: none;
       display: flex;
@@ -163,36 +163,6 @@
       letter-spacing: 0.06em;
       color: var(--muted);
       font-weight: 700;
-    }
-
-    /* Optional Photo Switch: set .photo-box to display: none for "No", or swap inner content for an <img> */
-    .photo-box {
-      display: flex;
-      align-items: center;
-      gap: 0.9rem;
-      margin-top: 1rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--line);
-    }
-
-    .avatar-circle {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: var(--ink);
-      color: var(--lime);
-      display: grid;
-      place-items: center;
-      font-weight: 700;
-      font-size: 1.05rem;
-      flex-shrink: 0;
-      overflow: hidden;
-    }
-
-    .avatar-circle img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
 
     /* Metrics inside Lime Tile */
@@ -295,9 +265,9 @@
         <a href="#playbook" class="btn btn-outline">SEO On-Page Playbook</a>
       </section>
 
-      <!-- Static Credentials Tile + Yes/No Photo Slot -->
+      <!-- At a Glance Tile -->
       <aside class="tile tile-soft span-4">
-        <span class="eyebrow">Static Profile</span>
+        <span class="eyebrow">At a Glance</span>
         <ul class="anchor-list">
           <li>
             <span class="anchor-label">Name</span>
@@ -305,26 +275,17 @@
           </li>
           <li>
             <span class="anchor-label">Current Role</span>
-            <strong>Shaligram Infotech</strong> (SEO Intern)
+            <strong>SHALIGRAM</strong> (SEO Trainee)
           </li>
           <li>
             <span class="anchor-label">Education</span>
-            BBA &bull; <strong>[Your University Name]</strong>
+            BBA (<strong>Indus University</strong>)
           </li>
           <li>
-            <span class="anchor-label">Base</span>
+            <span class="anchor-label">Based In</span>
             <strong>Ahmedabad</strong>, Gujarat
           </li>
         </ul>
-
-        <!-- Photo placeholder: change .photo-box to display:none if "No", or add <img src="photo.jpg"> if "Yes" -->
-        <div class="photo-box">
-          <div class="avatar-circle">KD</div>
-          <div style="font-size: 0.82rem; color: var(--muted);">
-            <strong style="color: var(--ink); display: block;">Photo Slot (Optional)</strong>
-            Decide Yes/No when ready
-          </div>
-        </div>
       </aside>
 
       <!-- Impact Metrics Tile -->
@@ -380,7 +341,7 @@
     </main>
 
     <footer>
-      Karan Dave &bull; Shaligram Infotech &bull; Ahmedabad
+      Karan Dave &bull; SHALIGRAM &bull; Ahmedabad
     </footer>
   </div>
 </body>
