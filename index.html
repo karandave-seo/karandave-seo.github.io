@@ -129,6 +129,9 @@
       border: 1px solid var(--line);
       border-radius: 22px;
       padding: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .tile-lime {
@@ -217,20 +220,37 @@
     .metrics-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 0.75rem;
-      margin-top: 0.75rem;
+      gap: 0.85rem;
+      margin: 1.25rem 0;
+    }
+
+    .metric-box {
+      background: rgba(255, 255, 255, 0.45);
+      border: 1px solid rgba(20, 33, 29, 0.12);
+      border-radius: 16px;
+      padding: 1rem 0.75rem;
+      text-align: center;
     }
 
     .metric-num {
       font-family: 'Fraunces', serif;
-      font-size: 1.85rem;
+      font-size: 1.9rem;
       font-weight: 700;
       line-height: 1.1;
+      margin-bottom: 0.25rem;
     }
 
     .metric-txt {
       font-size: 0.82rem;
       font-weight: 600;
+    }
+
+    .lime-note {
+      font-size: 0.88rem;
+      color: var(--ink);
+      opacity: 0.85;
+      padding-top: 0.85rem;
+      border-top: 1px dashed rgba(20, 33, 29, 0.2);
     }
 
     /* What I Do Stack */
@@ -323,7 +343,7 @@
 
     @media (max-width: 860px) {
       .span-8, .span-6, .span-4 { grid-column: span 12; }
-      .off-grid { grid-template-columns: 1fr; }
+      .metrics-row, .off-grid { grid-template-columns: 1fr; }
       .top-links a:not(.pill-cta) { display: none; }
     }
   </style>
@@ -343,13 +363,17 @@
     <main class="bento-grid">
       <!-- Main Intro Tile -->
       <section class="tile span-8">
-        <span class="eyebrow">Digital Strategy &bull; Technical SEO &bull; Market Research</span>
-        <h1>Turning search intent &amp; market data into growth.</h1>
-        <p class="lead">
-          I’m Karan Dave—combining business management fundamentals with hands-on SEO audits, analytics tracking, and primary consumer research.
-        </p>
-        <a href="#research" class="btn">Read EV Study</a>
-        <a href="#playbook" class="btn btn-outline">SEO On-Page Playbook</a>
+        <div>
+          <span class="eyebrow">Digital Strategy &bull; Technical SEO &bull; Market Research</span>
+          <h1>Turning search intent &amp; market data into growth.</h1>
+          <p class="lead">
+            I’m Karan Dave—combining business management fundamentals with hands-on SEO audits, analytics tracking, and primary consumer research.
+          </p>
+        </div>
+        <div>
+          <a href="#research" class="btn">Read EV Study</a>
+          <a href="#playbook" class="btn btn-outline">SEO On-Page Playbook</a>
+        </div>
       </section>
 
       <!-- At a Glance Tile -->
@@ -377,40 +401,47 @@
 
       <!-- Impact Metrics Tile -->
       <section id="work" class="tile tile-lime span-6">
-        <span class="eyebrow" style="color: var(--ink);">Measured Outcomes</span>
-        <h2>Search &amp; Growth Snapshot</h2>
-        <div class="metrics-row">
-          <div>
-            <div class="metric-num">2+</div>
-            <div class="metric-txt">Case Studies</div>
-          </div>
-          <div>
-            <div class="metric-num">150%</div>
-            <div class="metric-txt">Avg. Traffic Lift</div>
-          </div>
-          <div>
-            <div class="metric-num">25+</div>
-            <div class="metric-txt">Page-1 Keywords</div>
+        <div>
+          <span class="eyebrow" style="color: var(--ink);">Measured Outcomes</span>
+          <h2>Search &amp; Growth Snapshot</h2>
+          <div class="metrics-row">
+            <div class="metric-box">
+              <div class="metric-num">2+</div>
+              <div class="metric-txt">Case Studies</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-num">150%</div>
+              <div class="metric-txt">Avg. Traffic Lift</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-num">25+</div>
+              <div class="metric-txt">Page-1 Keywords</div>
+            </div>
           </div>
         </div>
+        <p class="lime-note">
+          Benchmarked across search visibility audits, keyword clustering, and organic performance tracking.
+        </p>
       </section>
 
       <!-- Capabilities Tile -->
       <section class="tile span-6">
-        <span class="eyebrow">What I Do</span>
-        <h2>SEO, B2B Content &amp; Web Analytics</h2>
-        <div class="skill-stack">
-          <div class="skill-row">
-            <strong>Technical SEO</strong>
-            Audits, sitemaps, indexing, and Google Business Profile optimization.
-          </div>
-          <div class="skill-row">
-            <strong>On-Page &amp; Copy</strong>
-            Keyword clustering, B2B service pages, case studies, and HTML structure.
-          </div>
-          <div class="skill-row">
-            <strong>Analytics &amp; CMS</strong>
-            GSC, GA4, and Semrush tracking across Odoo and WordPress.
+        <div>
+          <span class="eyebrow">What I Do</span>
+          <h2>SEO, B2B Content &amp; Web Analytics</h2>
+          <div class="skill-stack">
+            <div class="skill-row">
+              <strong>Technical SEO</strong>
+              Audits, sitemaps, indexing, and Google Business Profile optimization.
+            </div>
+            <div class="skill-row">
+              <strong>On-Page &amp; Copy</strong>
+              Keyword clustering, B2B service pages, case studies, and HTML structure.
+            </div>
+            <div class="skill-row">
+              <strong>Analytics &amp; CMS</strong>
+              GSC, GA4, and Semrush tracking across Odoo and WordPress.
+            </div>
           </div>
         </div>
       </section>
