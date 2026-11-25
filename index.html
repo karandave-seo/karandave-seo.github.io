@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karan Dave — SEO, Analytics & Market Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f6f5f0;
+      --tile: #ffffff;
+      --tile-alt: #eceae2;
+      --lime: #d9f99d;
+      --ink: #14211d;
+      --muted: #52605b;
+      --line: #dedbd0;
+      --accent: #166534;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      line-height: 1.6;
+      padding: 1.5rem 1rem 3rem;
+    }
+
+    .bento-wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    /* Top Bar */
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--tile);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 0.9rem 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .brand {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: var(--ink);
+    }
+
+    .top-links {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .top-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .top-links a:hover { color: var(--ink); }
+
+    .pill-cta {
+      background: var(--ink);
+      color: #fff !important;
+      padding: 0.45rem 0.95rem;
+      border-radius: 999px;
+    }
+
+    /* Bento Grid */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1rem;
+    }
+
+    .tile {
+      background: var(--tile);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 1.6rem;
+    }
+
+    .tile-lime {
+      background: var(--lime);
+      border-color: #bef264;
+    }
+
+    .tile-soft {
+      background: var(--tile-alt);
+    }
+
+    .span-8 { grid-column: span 8; }
+    .span-6 { grid-column: span 6; }
+    .span-4 { grid-column: span 4; }
+    .span-12 { grid-column: span 12; }
+
+    .eyebrow {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 0.65rem;
+      display: block;
+    }
+
+    h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2rem, 4vw, 2.9rem);
+      line-height: 1.12;
+      font-weight: 700;
+      margin-bottom: 0.9rem;
+    }
+
+    h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.35rem;
+      line-height: 1.25;
+      margin-bottom: 0.55rem;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 1.3rem;
+      max-width: 56ch;
+    }
+
+    /* Static Anchors List */
+    .anchor-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      font-size: 0.92rem;
+    }
+
+    .anchor-list li {
+      padding-bottom: 0.65rem;
+      border-bottom: 1px dashed var(--line);
+    }
+
+    .anchor-list li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .anchor-label {
+      display: block;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    /* Optional Photo Switch: set .photo-box to display: none for "No", or swap inner content for an <img> */
+    .photo-box {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .avatar-circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--lime);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      font-size: 1.05rem;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .avatar-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Metrics inside Lime Tile */
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-top: 0.75rem;
+    }
+
+    .metric-num {
+      font-family: 'Fraunces', serif;
+      font-size: 1.85rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .metric-txt {
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.65rem 1.1rem;
+      border-radius: 12px;
+      background: var(--ink);
+      color: #fff;
+      margin-right: 0.5rem;
+      margin-top: 0.25rem;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+
+    .quote {
+      font-style: italic;
+      color: var(--muted);
+      margin: 0.5rem 0 0.85rem;
+      font-size: 0.95rem;
+    }
+
+    .off-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-top: 0.6rem;
+    }
+
+    .off-chip {
+      background: var(--tile);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 0.85rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 1rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 860px) {
+      .span-8, .span-6, .span-4 { grid-column: span 12; }
+      .off-grid { grid-template-columns: 1fr; }
+      .top-links a:not(.pill-cta) { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bento-wrap">
+    <header class="topbar">
+      <a href="#" class="brand">Karan Dave</a>
+      <nav class="top-links">
+        <a href="#work">Work</a>
+        <a href="#research">EV Study</a>
+        <a href="#offclock">Off the Clock</a>
+        <a href="https://www.linkedin.com" target="_blank" class="pill-cta">LinkedIn</a>
+      </nav>
+    </header>
+
+    <main class="bento-grid">
+      <!-- Main Intro Tile -->
+      <section class="tile span-8">
+        <span class="eyebrow">Digital Strategy &bull; Technical SEO &bull; Market Research</span>
+        <h1>Turning search intent &amp; market data into growth.</h1>
+        <p class="lead">
+          I’m Karan Dave—combining business management fundamentals with hands-on SEO audits, analytics tracking, and primary consumer research.
+        </p>
+        <a href="#research" class="btn">Read EV Study</a>
+        <a href="#playbook" class="btn btn-outline">SEO On-Page Playbook</a>
+      </section>
+
+      <!-- Static Credentials Tile + Yes/No Photo Slot -->
+      <aside class="tile tile-soft span-4">
+        <span class="eyebrow">Static Profile</span>
+        <ul class="anchor-list">
+          <li>
+            <span class="anchor-label">Name</span>
+            <strong>Karan Dave</strong>
+          </li>
+          <li>
+            <span class="anchor-label">Current Role</span>
+            <strong>Shaligram Infotech</strong> (SEO Intern)
+          </li>
+          <li>
+            <span class="anchor-label">Education</span>
+            BBA &bull; <strong>[Your University Name]</strong>
+          </li>
+          <li>
+            <span class="anchor-label">Base</span>
+            <strong>Ahmedabad</strong>, Gujarat
+          </li>
+        </ul>
+
+        <!-- Photo placeholder: change .photo-box to display:none if "No", or add <img src="photo.jpg"> if "Yes" -->
+        <div class="photo-box">
+          <div class="avatar-circle">KD</div>
+          <div style="font-size: 0.82rem; color: var(--muted);">
+            <strong style="color: var(--ink); display: block;">Photo Slot (Optional)</strong>
+            Decide Yes/No when ready
+          </div>
+        </div>
+      </aside>
+
+      <!-- Impact Metrics Tile -->
+      <section id="work" class="tile tile-lime span-6">
+        <span class="eyebrow" style="color: var(--ink);">Measured Outcomes</span>
+        <h2>Search &amp; Growth Snapshot</h2>
+        <div class="metrics-row">
+          <div>
+            <div class="metric-num">2+</div>
+            <div class="metric-txt">Case Studies</div>
+          </div>
+          <div>
+            <div class="metric-num">150%</div>
+            <div class="metric-txt">Avg. Traffic Lift</div>
+          </div>
+          <div>
+            <div class="metric-num">25+</div>
+            <div class="metric-txt">Page-1 Keywords</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Capabilities Tile -->
+      <section class="tile span-6">
+        <span class="eyebrow">What I Do</span>
+        <h2>SEO, Business &amp; Consumer Insights</h2>
+        <p style="color: var(--muted); font-size: 0.94rem;">
+          <strong>SEO:</strong> Technical audits, keyword mapping, and on-page optimization.<br />
+          <strong>Business Analysis:</strong> BBA-backed trend &amp; funnel evaluation.<br />
+          <strong>Market Research:</strong> Primary surveys &amp; local buyer behavior.
+        </p>
+      </section>
+
+      <!-- Featured EV Research Tile -->
+      <section id="research" class="tile span-12">
+        <span class="eyebrow">Featured Research &bull; Ahmedabad</span>
+        <h2>Electric Two-Wheeler Adoption Study</h2>
+        <p class="quote">“Factors influencing consumer purchase of electric vehicles in the two-wheeler segment in Ahmedabad.”</p>
+        <p style="font-size: 0.95rem;">
+          <strong>Core Finding:</strong> Environmental benefits help, but service-network reliability and battery longevity transparency are what actually move petrol-bike buyers in Gujarat.
+        </p>
+      </section>
+
+      <!-- Beyond the Data Tile -->
+      <section id="offclock" class="tile tile-soft span-12">
+        <span class="eyebrow">Beyond the Data</span>
+        <div class="off-grid">
+          <div class="off-chip">🏍️ Riding my bike across Ahmedabad</div>
+          <div class="off-chip">🔎 Auditing local businesses (ask for my latest audit!)</div>
+          <div class="off-chip">🏏 Backing RCB &amp; following cricket</div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Karan Dave &bull; Shaligram Infotech &bull; Ahmedabad
+    </footer>
+  </div>
+</body>
+</html>
