@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Case Studies | Karan Dave — Technical SEO &amp; Market Research</title>
-  <meta name="description" content="Anonymized agency SEO execution and strategic market research case studies by Karan Dave—covering local e-commerce SEO, JSON-LD schema, B2B search architecture, and AI in marketing." />
+  <meta name="description" content="Agency SEO execution and strategic market research case studies by Karan Dave—covering local e-commerce SEO, JSON-LD schema, B2B search architecture, and AI in marketing." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://karandave-seo.github.io/case-studies.html" />
 
@@ -12,7 +12,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://karandave-seo.github.io/case-studies.html" />
   <meta property="og:title" content="Case Studies | Karan Dave — Technical SEO &amp; Market Research" />
-  <meta property="og:description" content="Anonymized agency SEO execution and strategic market research case studies by Karan Dave—covering local e-commerce SEO, JSON-LD schema, B2B search architecture, and AI in marketing." />
+  <meta property="og:description" content="Agency SEO execution and strategic market research case studies by Karan Dave—covering local e-commerce SEO, JSON-LD schema, B2B search architecture, and AI in marketing." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -225,12 +225,31 @@
       border-color: rgba(20, 33, 29, 0.25);
     }
 
-    /* Context Sidebar */
-    .note-box {
-      font-size: 0.9rem;
+    /* Audit Framework List inside Lime Card */
+    .lens-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-top: 0.45rem;
+    }
+
+    .lens-item {
+      background: rgba(255, 255, 255, 0.52);
+      border: 1px solid rgba(20, 33, 29, 0.12);
+      border-radius: 13px;
+      padding: 0.65rem 0.85rem;
+      font-size: 0.86rem;
+      line-height: 1.45;
       color: var(--ink);
-      opacity: 0.9;
-      line-height: 1.55;
+    }
+
+    .lens-item strong {
+      display: block;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.15rem;
     }
 
     /* Case Study Metadata Strip */
@@ -366,14 +385,25 @@
         </div>
       </section>
 
-      <!-- Confidentiality Note Tile -->
+      <!-- Audit & Research Framework Tile -->
       <aside class="tile tile-lime span-4">
         <div>
-          <span class="eyebrow" style="color: var(--ink);">Client Confidentiality</span>
-          <h2>Anonymized Agency Work</h2>
-          <p class="note-box">
-            Client brand names, domains, and proprietary analytics figures from projects executed at <strong>SHALIGRAM</strong> are anonymized to respect client NDAs—focusing on technical architecture, methodology, and deliverables.
-          </p>
+          <span class="eyebrow" style="color: var(--ink);">Methodology</span>
+          <h2>My Audit &amp; Case Lens</h2>
+          <ul class="lens-list">
+            <li class="lens-item">
+              <strong>01. Technical &amp; Crawl Health</strong>
+              Clean indexing, sitemaps, canonicals, and site architecture first.
+            </li>
+            <li class="lens-item">
+              <strong>02. Search Intent &amp; Schema</strong>
+              Mapping commercial queries and structured data to business entities.
+            </li>
+            <li class="lens-item">
+              <strong>03. Analytics &amp; Business Fit</strong>
+              Measuring outcomes via GSC, GA4, and Looker Studio through a BBA lens.
+            </li>
+          </ul>
         </div>
       </aside>
 
