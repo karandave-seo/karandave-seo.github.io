@@ -18,7 +18,7 @@
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Karan Dave — Technical SEO &amp; Market Research Case Studies" />
+  <meta property="og:image:alt" content="Karan Dave — Technical SEO & Market Research Case Studies" />
 
   <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -154,16 +154,30 @@
       letter-spacing: 0.08em;
       font-weight: 700;
       color: var(--muted);
-      display: inline-block;
+      margin-bottom: 0.55rem;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.45rem;
     }
 
-    .eyebrow-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-      margin-bottom: 0.55rem;
+    .eyebrow-badge {
+      background: var(--lime);
+      border: 1px solid #bef264;
+      color: var(--ink);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: none;
+      padding: 0.22rem 0.65rem;
+      border-radius: 999px;
+      text-decoration: none;
+    }
+
+    a.eyebrow-badge:hover {
+      border-color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 2px;
     }
 
     h1 {
@@ -234,17 +248,6 @@
     .pill-lime {
       background: var(--lime);
       border-color: #bef264;
-    }
-
-    .pill-link {
-      text-decoration: none;
-      transition: border-color 0.15s ease, background-color 0.15s ease;
-    }
-
-    .pill-link:hover {
-      border-color: var(--ink);
-      text-decoration: underline;
-      text-underline-offset: 3px;
     }
 
     .case-points {
@@ -325,7 +328,7 @@
       <!-- Intro Tile -->
       <section class="tile span-8">
         <div>
-          <span class="eyebrow" style="margin-bottom: 0.55rem;">Applied SEO &bull; Analytics &bull; Market Research</span>
+          <span class="eyebrow">Applied SEO &bull; Analytics &bull; Market Research</span>
           <h1>Case Studies &amp; Research</h1>
           <p class="lead">
             Practical search execution, structured reporting, and research projects spanning retail local SEO, B2B architecture, AI-driven marketing models, and EV buyer behavior.
@@ -335,7 +338,7 @@
 
       <!-- Overview Tile -->
       <aside class="tile tile-soft span-4">
-        <span class="eyebrow" style="margin-bottom: 0.55rem;">At a Glance</span>
+        <span class="eyebrow">At a Glance</span>
         <ul class="anchor-list">
           <li>
             <span class="anchor-label">Current Role</span>
@@ -355,10 +358,10 @@
       <!-- Case Study 01: Shree Swaminarayan Jewellers -->
       <section id="shree-swaminarayan-jewellers" class="tile span-12">
         <div>
-          <div class="eyebrow-row">
-            <span class="eyebrow">Case Study 01 &bull; Local &amp; Retail SEO</span>
-            <a href="https://share.google/E3iMDnfuaApaYKx57" target="_blank" rel="noopener noreferrer" class="pill pill-lime pill-link">Shree Swaminarayan Jewellers &nearr;</a>
-          </div>
+          <span class="eyebrow">
+            CASE STUDY 01 &bull; LOCAL &amp; RETAIL SEO &bull;
+            <a href="https://share.google/E3iMDnfuaApaYKx57" target="_blank" rel="noopener noreferrer" class="eyebrow-badge">Shree Swaminarayan Jewellers &nearr;</a>
+          </span>
           <h2>Multi-Location Retail E-Commerce: Local SEO, Schema &amp; Reporting</h2>
         </div>
 
@@ -394,12 +397,15 @@
       <!-- Case Study 02: B2B Service Architecture -->
       <section id="b2b-technical-seo" class="tile span-12">
         <div>
-          <span class="eyebrow" style="margin-bottom: 0.55rem;">Case Study 02 &bull; SHALIGRAM &bull; Technical &amp; On-Page SEO</span>
+          <span class="eyebrow">
+            CASE STUDY 02 &bull; TECHNICAL &amp; ON-PAGE SEO &bull;
+            <span class="eyebrow-badge">SHALIGRAM</span>
+          </span>
           <h2>B2B Service Architecture: Technical Audits &amp; Intent Clustering</h2>
         </div>
 
         <div class="pill-wrap">
-          <span class="pill pill-lime">SHALIGRAM &bull; B2B Services</span>
+          <span class="pill pill-lime">Focus: B2B Services &amp; Organic Architecture</span>
           <span class="pill">CMS: WordPress &amp; Odoo</span>
           <span class="pill">Stack: GSC, GA4, Semrush, Ahrefs, Screaming Frog, Rank Math</span>
         </div>
@@ -431,7 +437,7 @@
       <!-- Case Study 03: Integration of AI in Marketing -->
       <section id="ai-marketing" class="tile tile-lime span-12">
         <div>
-          <span class="eyebrow" style="color: var(--ink); margin-bottom: 0.55rem;">Case Study 03 &bull; Strategic AI &amp; Marketing</span>
+          <span class="eyebrow" style="color: var(--ink);">Case Study 03 &bull; Strategic AI &amp; Marketing</span>
           <h2>Integration of AI in Marketing</h2>
         </div>
 
@@ -458,7 +464,7 @@
       <!-- Case Study 04: EV Two-Wheeler Purchase Behavior -->
       <section id="ev-consumer-study" class="tile span-12">
         <div>
-          <span class="eyebrow" style="margin-bottom: 0.55rem;">Case Study 04 &bull; Consumer &amp; Market Research</span>
+          <span class="eyebrow">Case Study 04 &bull; Consumer &amp; Market Research</span>
           <h2>Factors Influencing Electric Two-Wheeler Purchases in Ahmedabad</h2>
         </div>
 
