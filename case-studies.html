@@ -4,54 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Case Studies | Karan Dave — Technical SEO &amp; Market Research</title>
-  <meta name="description" content="Agency SEO execution and strategic market research case studies by Karan Dave—covering local e-commerce SEO, JSON-LD schema, B2B search architecture, and AI in marketing." />
+  <meta name="description" content="SEO, analytics, and market research case studies by Karan Dave—covering Shree Swaminarayan Jewellers local SEO &amp; Looker Studio reporting, B2B technical audits, AI in marketing, and EV consumer research." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://karandave-seo.github.io/case-studies.html" />
 
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Karan Dave" />
   <meta property="og:url" content="https://karandave-seo.github.io/case-studies.html" />
   <meta property="og:title" content="Case Studies | Karan Dave — Technical SEO &amp; Market Research" />
-  <meta property="og:description" content="Agency SEO execution and strategic market research case studies by Karan Dave—covering local e-commerce SEO, JSON-LD schema, B2B search architecture, and AI in marketing." />
+  <meta property="og:description" content="SEO, analytics, and market research case studies by Karan Dave—covering Shree Swaminarayan Jewellers local SEO &amp; Looker Studio reporting, B2B technical audits, AI in marketing, and EV consumer research." />
+  <meta property="og:image" content="https://karandave-seo.github.io/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Karan Dave — Technical SEO &amp; Market Research Case Studies" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Case Studies | Karan Dave — Technical SEO &amp; Market Research" />
+  <meta name="twitter:description" content="SEO, analytics, and market research case studies by Karan Dave—covering Shree Swaminarayan Jewellers local SEO &amp; Looker Studio reporting, B2B technical audits, AI in marketing, and EV consumer research." />
+  <meta name="twitter:image" content="https://karandave-seo.github.io/og-image.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Structured Data (CollectionPage & Case Study List) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "SEO & Market Research Case Studies — Karan Dave",
-    "url": "https://karandave-seo.github.io/case-studies.html",
-    "author": {
-      "@type": "Person",
-      "name": "Karan Dave",
-      "url": "https://karandave-seo.github.io/"
-    },
-    "mainEntity": {
-      "@type": "ItemList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Multi-Location Retail E-Commerce: Local SEO, JSON-LD Schema & Looker Studio Reporting"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "B2B Service Architecture: Technical SEO Audits, Intent Clustering & On-Page Structure"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Integration of AI in Marketing & Consumer Adoption Research"
-        }
-      ]
-    }
-  }
-  </script>
 
   <style>
     :root {
@@ -89,6 +66,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 1rem;
       background: rgba(255, 255, 255, 1);
       backdrop-filter: blur(0px);
       -webkit-backdrop-filter: blur(0px);
@@ -110,13 +88,15 @@
       font-size: 1.2rem;
       text-decoration: none;
       color: var(--ink);
+      white-space: nowrap;
     }
 
     .top-links {
       display: flex;
-      gap: 1.25rem;
+      gap: 1.15rem;
       align-items: center;
-      font-size: 0.9rem;
+      flex-wrap: wrap;
+      font-size: 0.88rem;
       font-weight: 600;
     }
 
@@ -137,6 +117,25 @@
       border-radius: 999px;
     }
 
+    /* Mobile Table of Contents Strip */
+    .mobile-toc {
+      display: none;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 1rem;
+    }
+
+    .mobile-toc a {
+      text-decoration: none;
+      background: var(--tile);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+    }
+
     /* Bento Grid */
     .bento-grid {
       display: grid;
@@ -149,7 +148,7 @@
       background: var(--tile);
       border: 1px solid var(--line);
       border-radius: 22px;
-      padding: 1.75rem;
+      padding: 1.6rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -165,7 +164,6 @@
     }
 
     .span-8 { grid-column: span 8; }
-    .span-6 { grid-column: span 6; }
     .span-4 { grid-column: span 4; }
     .span-12 { grid-column: span 12; }
 
@@ -175,145 +173,92 @@
       letter-spacing: 0.08em;
       font-weight: 700;
       color: var(--muted);
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.55rem;
       display: block;
     }
 
     h1 {
       font-family: 'Fraunces', serif;
-      font-size: clamp(1.9rem, 3.6vw, 2.6rem);
-      line-height: 1.14;
+      font-size: clamp(2rem, 3.8vw, 2.75rem);
+      line-height: 1.12;
       font-weight: 700;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.75rem;
     }
 
     h2 {
       font-family: 'Fraunces', serif;
-      font-size: 1.45rem;
+      font-size: 1.38rem;
       line-height: 1.25;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.35rem;
     }
 
     .lead {
       color: var(--muted);
       font-size: 0.98rem;
-      max-width: 62ch;
+      max-width: 58ch;
     }
 
-    /* Jump Pills */
-    .jump-pills {
+    .case-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .pill-wrap {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1.15rem;
+      gap: 0.45rem;
+      margin: 0.75rem 0 0.95rem;
     }
 
-    .jump-pill {
+    .pill {
       background: var(--paper);
       border: 1px solid var(--line);
       color: var(--ink);
-      text-decoration: none;
-      font-size: 0.82rem;
-      font-weight: 700;
-      padding: 0.42rem 0.85rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.3rem 0.68rem;
       border-radius: 999px;
-      transition: background 0.2s ease, border-color 0.2s ease;
     }
 
-    .jump-pill:hover {
-      background: var(--tile-alt);
-      border-color: rgba(20, 33, 29, 0.25);
-    }
-
-    /* Audit Framework List inside Lime Card */
-    .lens-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-      margin-top: 0.45rem;
-    }
-
-    .lens-item {
-      background: rgba(255, 255, 255, 0.52);
-      border: 1px solid rgba(20, 33, 29, 0.12);
-      border-radius: 13px;
-      padding: 0.65rem 0.85rem;
-      font-size: 0.86rem;
-      line-height: 1.45;
-      color: var(--ink);
-    }
-
-    .lens-item strong {
-      display: block;
-      font-size: 0.76rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.15rem;
-    }
-
-    /* Case Study Metadata Strip */
-    .meta-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .meta-badge {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      font-size: 0.78rem;
-      font-weight: 700;
-      color: var(--muted);
-      padding: 0.28rem 0.7rem;
-      border-radius: 8px;
-    }
-
-    .meta-badge.lime-badge {
+    .pill-lime {
       background: var(--lime);
       border-color: #bef264;
-      color: var(--ink);
     }
 
-    /* Challenge -> Execution -> Outcome 3-Column Grid */
-    .ceo-grid {
+    .case-points {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 0.85rem;
-      margin-top: 0.85rem;
+      gap: 0.8rem;
+      margin-top: 0.25rem;
     }
 
-    .ceo-box {
+    .case-box {
       background: var(--paper);
       border: 1px solid var(--line);
       border-radius: 15px;
-      padding: 1rem 1.1rem;
-      font-size: 0.9rem;
+      padding: 0.95rem 1.05rem;
+      font-size: 0.88rem;
       color: var(--muted);
     }
 
-    .ceo-box strong {
+    .case-box strong {
       color: var(--ink);
       display: block;
       font-size: 0.78rem;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
       margin-bottom: 0.35rem;
     }
 
-    .ceo-box ul {
+    .case-list {
       padding-left: 1.1rem;
       display: flex;
       flex-direction: column;
-      gap: 0.35rem;
-    }
-
-    .quote {
-      font-style: italic;
-      color: var(--muted);
-      margin: 0.35rem 0 0.85rem;
-      font-size: 0.95rem;
+      gap: 0.4rem;
+      margin-top: 0.2rem;
     }
 
     .btn {
@@ -321,10 +266,42 @@
       text-decoration: none;
       font-weight: 700;
       font-size: 0.88rem;
-      padding: 0.6rem 1.05rem;
+      padding: 0.58rem 1.05rem;
       border-radius: 12px;
       background: var(--ink);
       color: #fff;
+      border: 1px solid var(--ink);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+
+    .btn-sm {
+      font-size: 0.82rem;
+      padding: 0.48rem 0.9rem;
+      border-radius: 10px;
+    }
+
+    .toc-index-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      font-size: 0.9rem;
+    }
+
+    .toc-index-list a {
+      color: var(--ink);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .toc-index-list a:hover {
+      color: var(--accent);
     }
 
     /* Footer */
@@ -348,9 +325,10 @@
     }
 
     @media (max-width: 860px) {
-      .span-8, .span-6, .span-4 { grid-column: span 12; }
-      .ceo-grid { grid-template-columns: 1fr; }
+      .span-8, .span-4 { grid-column: span 12; }
+      .case-points { grid-template-columns: 1fr; }
       .top-links a:not(.pill-cta) { display: none; }
+      .mobile-toc { display: flex; }
     }
   </style>
 </head>
@@ -358,173 +336,201 @@
   <div class="bento-wrap">
     <header class="topbar" id="topbar">
       <a href="index.html" class="brand">Karan Dave</a>
-      <nav class="top-links">
-        <a href="index.html#experience">Experience</a>
-        <a href="case-studies.html" class="active">Case Studies</a>
-        <a href="blog.html">Blog</a>
-        <a href="resume.html">Resume</a>
-        <a href="https://www.linkedin.com/in/karan-dave-984a883a8/" target="_blank" rel="noopener noreferrer" class="pill-cta">LinkedIn</a>
+      <nav class="top-links" aria-label="Case study table of contents">
+        <a href="index.html">Home</a>
+        <a href="#shree-swaminarayan-jewellers" class="active">01. Jewellers SEO</a>
+        <a href="#b2b-technical-seo">02. B2B SEO</a>
+        <a href="#ai-marketing">03. AI Marketing</a>
+        <a href="#ev-consumer-study">04. EV Study</a>
+        <a href="resume.html" class="pill-cta">Resume</a>
       </nav>
     </header>
 
+    <div class="mobile-toc" aria-label="Jump to case study">
+      <a href="#shree-swaminarayan-jewellers">01. Shree Swaminarayan Jewellers</a>
+      <a href="#b2b-technical-seo">02. B2B SEO</a>
+      <a href="#ai-marketing">03. AI Marketing</a>
+      <a href="#ev-consumer-study">04. EV Study</a>
+    </div>
+
     <main class="bento-grid">
-      <!-- Page Header Tile -->
+      <!-- Intro Tile -->
       <section class="tile span-8">
         <div>
-          <span class="eyebrow">Proof of Work &bull; Execution &amp; Research</span>
-          <h1>SEO &amp; Market Research Case Studies</h1>
+          <span class="eyebrow">Applied SEO &bull; Analytics &bull; Market Research</span>
+          <h1>Case Studies &amp; Research</h1>
           <p class="lead">
-            A breakdown of hands-on technical SEO implementations executed during my agency tenure alongside academic and consumer market research.
+            Practical search execution, structured reporting, and research projects spanning retail local SEO, B2B architecture, AI-driven marketing models, and EV buyer behavior.
           </p>
         </div>
-        <div class="jump-pills">
-          <a href="#local-ecommerce" class="jump-pill">01. Multi-Branch Local E-Commerce</a>
-          <a href="#b2b-seo" class="jump-pill">02. B2B Service Architecture</a>
-          <a href="#ai-marketing" class="jump-pill">03. AI in Marketing Models</a>
-          <a href="#ev-research" class="jump-pill">04. EV Consumer Adoption</a>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.1rem;">
+          <a href="#shree-swaminarayan-jewellers" class="btn">Jump to Case Studies</a>
+          <a href="resume.html" class="btn btn-outline">View Resume &rarr;</a>
         </div>
       </section>
 
-      <!-- Audit & Research Framework Tile -->
-      <aside class="tile tile-lime span-4">
-        <div>
-          <span class="eyebrow" style="color: var(--ink);">Methodology</span>
-          <h2>My Audit &amp; Case Lens</h2>
-          <ul class="lens-list">
-            <li class="lens-item">
-              <strong>01. Technical &amp; Crawl Health</strong>
-              Clean indexing, sitemaps, canonicals, and site architecture first.
-            </li>
-            <li class="lens-item">
-              <strong>02. Search Intent &amp; Schema</strong>
-              Mapping commercial queries and structured data to business entities.
-            </li>
-            <li class="lens-item">
-              <strong>03. Analytics &amp; Business Fit</strong>
-              Measuring outcomes via GSC, GA4, and Looker Studio through a BBA lens.
-            </li>
-          </ul>
-        </div>
+      <!-- Table of Contents Tile -->
+      <aside class="tile tile-soft span-4">
+        <span class="eyebrow">Table of Contents</span>
+        <ul class="toc-index-list">
+          <li><a href="#shree-swaminarayan-jewellers">01. Shree Swaminarayan Jewellers — Local SEO &amp; Reporting</a></li>
+          <li><a href="#b2b-technical-seo">02. B2B Service Architecture — Audits &amp; Clustering</a></li>
+          <li><a href="#ai-marketing">03. Integration of AI in Marketing</a></li>
+          <li><a href="#ev-consumer-study">04. EV Two-Wheeler Purchase Behavior (Ahmedabad)</a></li>
+        </ul>
       </aside>
 
-      <!-- Case Study 1: Multi-Branch Retail E-Commerce -->
-      <article id="local-ecommerce" class="tile span-12">
-        <span class="eyebrow">Case Study 01 &bull; Agency Execution @ SHALIGRAM</span>
-        <h2>Multi-Location Retail E-Commerce: Local SEO, Schema &amp; Reporting</h2>
-        <div class="meta-strip">
-          <span class="meta-badge lime-badge">Client: Regional Jewellery Retailer (2 Branches, Ahmedabad)</span>
-          <span class="meta-badge">CMS: Odoo</span>
-          <span class="meta-badge">Stack: GBP, JSON-LD, GSC, GA4, Looker Studio</span>
+      <!-- Case Study 01: Shree Swaminarayan Jewellers -->
+      <section id="shree-swaminarayan-jewellers" class="tile span-12">
+        <div class="case-header">
+          <div>
+            <span class="eyebrow">Case Study 01 &bull; Local &amp; Retail SEO</span>
+            <h2>Multi-Location Retail E-Commerce: Local SEO, Schema &amp; Reporting</h2>
+          </div>
+          <a href="https://share.google/E3iMDnfuaApaYKx57" target="_blank" rel="noopener noreferrer" class="btn btn-sm">View Shree Swaminarayan Jewellers &rarr;</a>
         </div>
-        <div class="ceo-grid">
-          <div class="ceo-box">
-            <strong>Challenge</strong>
-            A retail jewellery e-commerce storefront operating two physical showrooms in North-West Ahmedabad needed stronger local map visibility, clearer entity signals for multi-branch search queries, and unified organic reporting.
-          </div>
-          <div class="ceo-box">
-            <strong>Execution</strong>
-            <ul>
-              <li>Audited and optimized individual Google Business Profiles for both branch locations with consistent NAP alignment.</li>
-              <li>Authored and deployed custom <code>LocalBusiness</code> &amp; <code>Organization</code> JSON-LD structured data on Odoo templates.</li>
-              <li>Built an automated Looker Studio dashboard blending GSC query data and GA4 engagement metrics.</li>
-            </ul>
-          </div>
-          <div class="ceo-box">
-            <strong>Deliverables &amp; Focus</strong>
-            <ul>
-              <li>Eliminated duplicate local entity ambiguity across branch landing pages.</li>
-              <li>Established clean Search Console indexing hygiene and weekly local discovery tracking.</li>
-              <li>Replaced manual spreadsheet reporting with live stakeholder dashboards.</li>
-            </ul>
-          </div>
-        </div>
-      </article>
 
-      <!-- Case Study 2: B2B Service Page Architecture -->
-      <article id="b2b-seo" class="tile span-12">
-        <span class="eyebrow">Case Study 02 &bull; Agency Execution @ SHALIGRAM</span>
-        <h2>B2B Service Architecture: Technical Audits &amp; Intent Clustering</h2>
-        <div class="meta-strip">
-          <span class="meta-badge lime-badge">Client: B2B Technology &amp; Digital Services</span>
-          <span class="meta-badge">CMS: WordPress &amp; Odoo</span>
-          <span class="meta-badge">Stack: Semrush, GSC, Screaming Frog / Technical Audits</span>
+        <div class="pill-wrap">
+          <span class="pill pill-lime">Client: Shree Swaminarayan Jewellers</span>
+          <span class="pill">CMS: Odoo</span>
+          <span class="pill">Stack: GBP, JSON-LD, GSC, GA4, Looker Studio</span>
         </div>
-        <div class="ceo-grid">
-          <div class="ceo-box">
-            <strong>Challenge</strong>
-            High-intent commercial service pages suffered from overlapping keyword targeting, thin semantic heading structure, and crawl budget waste from unoptimized sitemap and robots rules.
-          </div>
-          <div class="ceo-box">
-            <strong>Execution</strong>
-            <ul>
-              <li>Conducted full technical SEO audits covering XML sitemaps, <code>robots.txt</code> directives, canonical tags, and crawl depth.</li>
-              <li>Clustered commercial and informational keywords via Semrush to map distinct search intents to dedicated service URLs.</li>
-              <li>Restructured on-page HTML hierarchy (<code>H1–H3</code>), internal anchor links, and metadata for B2B decision-makers.</li>
-            </ul>
-          </div>
-          <div class="ceo-box">
-            <strong>Deliverables &amp; Focus</strong>
-            <ul>
-              <li>Resolved keyword cannibalization across core B2B service offerings.</li>
-              <li>Improved crawlability and indexation consistency for priority commercial pages.</li>
-              <li>Created repeatable on-page SEO templates for new case studies and solution pages.</li>
-            </ul>
-          </div>
-        </div>
-      </article>
 
-      <!-- Case Study 3: AI in Marketing -->
-      <article id="ai-marketing" class="tile span-6">
-        <div>
-          <span class="eyebrow">Case Study 03 &bull; Strategic Marketing Research</span>
-          <h2>Integration of AI in Marketing</h2>
-          <p class="quote">“Mapping Mechanical, Thinking, and Feeling AI across Meta, Amazon, Spotify, and Netflix.”</p>
-          <div class="ceo-box" style="margin-bottom: 0.75rem;">
-            <strong>Core Framework</strong>
-            Evaluated how platform business models dictate AI deployment—contrasting Meta's advertiser-ROI segmentation and Amazon's end-to-end retail conversion engine with Spotify and Netflix's churn-reducing recommendation loops.
+        <div class="case-points">
+          <div class="case-box">
+            <strong>Challenge</strong>
+            Shree Swaminarayan Jewellers needed stronger local map visibility, clear entity signals across showroom locations, and unified organic performance tracking connecting search visibility with storefront engagement.
           </div>
-          <div class="ceo-box">
+          <div class="case-box">
+            <strong>Execution</strong>
+            <ul class="case-list">
+              <li>Audited and optimized Google Business Profile listings with consistent NAP alignment.</li>
+              <li>Authored and deployed custom <code>LocalBusiness</code> &amp; <code>Organization</code> JSON-LD schema markup on Odoo templates.</li>
+              <li>Built a Looker Studio reporting view combining Search Console query data and GA4 engagement metrics.</li>
+            </ul>
+          </div>
+          <div class="case-box">
+            <strong>Deliverables &amp; Focus</strong>
+            <ul class="case-list">
+              <li>Clearer local entity signals across showroom and storefront pages.</li>
+              <li>Clean Search Console indexing hygiene and local discovery monitoring.</li>
+              <li>Streamlined weekly/monthly reporting for faster decision-making.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case Study 02: B2B Service Architecture -->
+      <section id="b2b-technical-seo" class="tile span-12">
+        <div class="case-header">
+          <div>
+            <span class="eyebrow">Case Study 02 &bull; Technical &amp; On-Page SEO</span>
+            <h2>B2B Service Architecture: Technical Audits &amp; Intent Clustering</h2>
+          </div>
+          <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="btn btn-sm btn-outline">&uarr; Top of Page</a>
+        </div>
+
+        <div class="pill-wrap">
+          <span class="pill pill-lime">Focus: B2B Services &amp; Organic Architecture</span>
+          <span class="pill">CMS: WordPress &amp; Odoo</span>
+          <span class="pill">Stack: GSC, GA4, Semrush, Ahrefs, Screaming Frog, Rank Math</span>
+        </div>
+
+        <div class="case-points">
+          <div class="case-box">
+            <strong>Challenge</strong>
+            Enterprise and B2B service pages require clear topical hierarchy, crawlable internal linking, accurate schema markup, and intent-aligned copy so high-value commercial pages don't compete with one another.
+          </div>
+          <div class="case-box">
+            <strong>Execution</strong>
+            <ul class="case-list">
+              <li>Ran crawl and indexing diagnostics across XML sitemaps, <code>robots.txt</code>, canonicals, and metadata.</li>
+              <li>Grouped target terms using Hub-and-Spoke keyword clustering mapped to search intent.</li>
+              <li>Implemented structured JSON-LD schema and refined on-page copy and heading hierarchy.</li>
+            </ul>
+          </div>
+          <div class="case-box">
+            <strong>Deliverables &amp; Focus</strong>
+            <ul class="case-list">
+              <li>Actionable technical audit findings and prioritization roadmaps.</li>
+              <li>Structured content briefs and service page optimizations.</li>
+              <li>Ongoing tracking of impressions, CTR, and landing page performance.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case Study 03: Integration of AI in Marketing -->
+      <section id="ai-marketing" class="tile tile-lime span-12">
+        <div class="case-header">
+          <div>
+            <span class="eyebrow" style="color: var(--ink);">Case Study 03 &bull; Strategic AI &amp; Marketing</span>
+            <h2>Integration of AI in Marketing</h2>
+          </div>
+          <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="btn btn-sm">&uarr; Top of Page</a>
+        </div>
+
+        <p style="font-size: 0.94rem; color: var(--ink); margin: 0.55rem 0 0.85rem; max-width: 78ch;">
+          Analyzes how distinct AI-driven business models shape marketing strategy across <strong>Meta Platforms</strong>, <strong>Amazon</strong>, <strong>Spotify</strong>, and <strong>Netflix</strong>—mapping AI capabilities across Mechanical, Thinking, and Feeling AI while weighing competition and ethics.
+        </p>
+
+        <div class="case-points">
+          <div class="case-box" style="background: rgba(255,255,255,0.65); border-color: rgba(20,33,29,0.16);">
+            <strong>Advertising Model (Meta)</strong>
+            Optimizes advertiser targeting, delivery, and campaign ROI through machine learning signals.
+          </div>
+          <div class="case-box" style="background: rgba(255,255,255,0.65); border-color: rgba(20,33,29,0.16);">
+            <strong>Retail Engine (Amazon)</strong>
+            Enhances product discovery, recommendations, and conversion across the buyer journey.
+          </div>
+          <div class="case-box" style="background: rgba(255,255,255,0.65); border-color: rgba(20,33,29,0.16);">
+            <strong>Retention &amp; Discovery (Spotify &amp; Netflix)</strong>
+            Drives personalized recommendations and engagement to protect subscription retention.
+          </div>
+        </div>
+      </section>
+
+      <!-- Case Study 04: EV Two-Wheeler Purchase Behavior -->
+      <section id="ev-consumer-study" class="tile span-12">
+        <div class="case-header">
+          <div>
+            <span class="eyebrow">Case Study 04 &bull; Consumer &amp; Market Research</span>
+            <h2>Factors Influencing Electric Two-Wheeler Purchases in Ahmedabad</h2>
+          </div>
+          <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="btn btn-sm btn-outline">&uarr; Top of Page</a>
+        </div>
+
+        <div class="pill-wrap">
+          <span class="pill pill-lime">Domain: Consumer Behavior &amp; Market Research</span>
+          <span class="pill">Location: Ahmedabad, Gujarat</span>
+          <span class="pill">Tools: Survey Analysis, Excel / Google Sheets</span>
+        </div>
+
+        <div class="case-points">
+          <div class="case-box">
+            <strong>Research Objective</strong>
+            Identified the key economic, practical, and brand factors shaping buyer decisions around electric two-wheelers in Ahmedabad.
+          </div>
+          <div class="case-box">
+            <strong>Key Decision Factors</strong>
+            Evaluated upfront vs. running cost savings, real-world battery range, charging convenience, service reliability, and brand trust.
+          </div>
+          <div class="case-box">
             <strong>Strategic Takeaway</strong>
-            Sustainable marketing advantage comes from aligning specific AI tiers with core revenue mechanics while governing algorithmic bias and consumer privacy.
+            Clear cost-of-ownership communication and practical range/charging confidence are essential to converting hesitant urban buyers.
           </div>
         </div>
-      </article>
-
-      <!-- Case Study 4: EV Consumer Adoption -->
-      <article id="ev-research" class="tile span-6">
-        <div>
-          <span class="eyebrow">Case Study 04 &bull; Consumer Behavior Study</span>
-          <h2>Electric Two-Wheeler Adoption in Ahmedabad</h2>
-          <p class="quote">“Primary consumer research analyzing purchase drivers and adoption friction in urban Gujarat.”</p>
-          <div class="ceo-box" style="margin-bottom: 0.75rem;">
-            <strong>Research Scope</strong>
-            Surveyed and analyzed urban commuters in Ahmedabad to weigh total cost of ownership, daily range expectations, charging infrastructure perception, and subsidy awareness.
-          </div>
-          <div class="ceo-box">
-            <strong>Marketing &amp; Positioning Insight</strong>
-            Purchase intent hinges less on environmental messaging and more on upfront battery warranty assurance, running-cost math, and local service network trust.
-          </div>
-        </div>
-      </article>
-
-      <!-- Bottom CTA Strip -->
-      <section class="tile tile-soft span-12" style="flex-direction: row; align-items: center; flex-wrap: wrap; gap: 1rem;">
-        <div>
-          <span class="eyebrow" style="margin-bottom: 0.25rem;">Next Step</span>
-          <strong style="font-size: 1.05rem;">Looking for full role timelines, certifications, and academic credentials?</strong>
-        </div>
-        <a href="resume.html" class="btn">View Full Resume &rarr;</a>
       </section>
     </main>
 
     <footer>
       <a href="index.html">Home</a>
       &bull;
+      <a href="resume.html">Resume</a>
+      &bull;
+      <a href="mailto:davekaran955@gmail.com">davekaran955@gmail.com</a>
+      &bull;
       <a href="https://www.linkedin.com/in/karan-dave-984a883a8/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      &bull;
-      <a href="https://www.shaligram.io/" target="_blank" rel="noopener noreferrer">SHALIGRAM</a>
-      &bull;
-      Ahmedabad
     </footer>
   </div>
 
