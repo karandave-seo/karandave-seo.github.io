@@ -1,0 +1,66 @@
+name: Auto-Update Sitemap
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.html'
+      - '.github/workflows/update-sitemap.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate sitemap.xml
+        run: |
+          BASE_URL="https://karandave-seo.github.io"
+          {
+            echo '<?xml version="1.0" encoding="UTF-8"?>'
+            echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+
+            find . -name "*.html" -not -path "./.*" | sort | while read -r file; do
+              # Skip pages marked with noindex (such as resume.html)
+              if grep -qi 'name="robots"[^>]*noindex' "$file"; then
+                continue
+              fi
+
+              clean_path="${file#./}"
+              if [ "$clean_path" = "index.html" ]; then
+                loc="$BASE_URL/"
+              else
+                loc="$BASE_URL/$clean_path"
+              fi
+
+              lastmod=$(git log -1 --format="%cs" -- "$file")
+              if [ -z "$lastmod" ]; then
+                lastmod=$(date -u +"%Y-%m-%d")
+              fi
+
+              echo "  <url>"
+              echo "    <loc>$loc</loc>"
+              echo "    <lastmod>$lastmod</lastmod>"
+              echo "  </url>"
+            done
+
+            echo '</urlset>'
+          } > sitemap.xml
+
+      - name: Commit updated sitemap.xml
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: auto-update sitemap.xml"
+            git push
+          fi
