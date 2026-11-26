@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume | Karan Dave — Technical SEO, Digital Strategy &amp; Market Research</title>
+  <meta name="description" content="Curriculum Vitae and professional experience of Karan Dave — SEO Trainee at SHALIGRAM and BBA graduate from Indus University, Ahmedabad." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://karandave-seo.github.io/resume.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --paper: #f6f5f0;
+      --tile: #ffffff;
+      --tile-alt: #eceae2;
+      --lime: #d9f99d;
+      --ink: #14211d;
+      --muted: #52605b;
+      --line: #dedbd0;
+      --accent: #166534;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      line-height: 1.6;
+      padding: 1.5rem 1rem 3rem;
+    }
+
+    .bento-wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    /* Sticky Scroll-Frosted Top Bar */
+    .topbar {
+      position: sticky;
+      top: 0.75rem;
+      z-index: 50;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 1);
+      backdrop-filter: blur(0px);
+      -webkit-backdrop-filter: blur(0px);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 0.9rem 1.4rem;
+      margin-bottom: 1rem;
+      transition: box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .topbar.is-scrolled {
+      box-shadow: 0 10px 30px -12px rgba(20, 33, 29, 0.14);
+      border-color: rgba(20, 33, 29, 0.14);
+    }
+
+    .brand {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: var(--ink);
+    }
+
+    .top-links {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .top-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .top-links a:hover,
+    .top-links a.active {
+      color: var(--ink);
+    }
+
+    .pill-cta {
+      background: var(--ink);
+      color: #fff !important;
+      padding: 0.45rem 0.95rem;
+      border-radius: 999px;
+    }
+
+    /* Bento Grid */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1rem;
+    }
+
+    .tile {
+      background: var(--tile);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 1.65rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .tile-lime {
+      background: var(--lime);
+      border-color: #bef264;
+    }
+
+    .tile-soft {
+      background: var(--tile-alt);
+    }
+
+    .span-8 { grid-column: span 8; }
+    .span-7 { grid-column: span 7; }
+    .span-6 { grid-column: span 6; }
+    .span-5 { grid-column: span 5; }
+    .span-4 { grid-column: span 4; }
+    .span-12 { grid-column: span 12; }
+
+    .eyebrow {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+
+    h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2rem, 3.8vw, 2.75rem);
+      line-height: 1.12;
+      font-weight: 700;
+      margin-bottom: 0.45rem;
+    }
+
+    h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.35rem;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+
+    .role-sub {
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 0.96rem;
+      max-width: 60ch;
+      margin-bottom: 1.2rem;
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 0.6rem 1.05rem;
+      border-radius: 12px;
+      background: var(--ink);
+      color: #fff;
+      border: 1px solid var(--ink);
+      cursor: pointer;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+
+    /* Contact / Quick Details List */
+    .meta-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      font-size: 0.9rem;
+    }
+
+    .meta-list li {
+      padding-bottom: 0.6rem;
+      border-bottom: 1px dashed var(--line);
+    }
+
+    .meta-list li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .meta-label {
+      display: block;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .meta-link {
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 600;
+    }
+
+    .meta-link:hover { color: var(--accent); }
+
+    /* Experience & Education Entries */
+    .cv-entry {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1.15rem 1.25rem;
+    }
+
+    .cv-entry + .cv-entry {
+      margin-top: 0.85rem;
+    }
+
+    .lime-entry {
+      background: rgba(255, 255, 255, 0.58);
+      border: 1px solid rgba(20, 33, 29, 0.14);
+      border-radius: 16px;
+      padding: 1.1rem 1.2rem;
+    }
+
+    .lime-entry + .lime-entry {
+      margin-top: 0.8rem;
+    }
+
+    .cv-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .cv-title {
+      font-weight: 700;
+      font-size: 1.02rem;
+      color: var(--ink);
+    }
+
+    .cv-org {
+      font-weight: 600;
+      color: var(--accent);
+      font-size: 0.92rem;
+    }
+
+    .cv-date {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+
+    .cv-bullets {
+      padding-left: 1.15rem;
+      margin-top: 0.55rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.91rem;
+      color: var(--muted);
+    }
+
+    .cv-bullets strong {
+      color: var(--ink);
+    }
+
+    /* Competencies & Tools */
+    .skill-group + .skill-group {
+      margin-top: 0.95rem;
+    }
+
+    .skill-group-label {
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 0.45rem;
+    }
+
+    .pill-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .pill {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.32rem 0.68rem;
+      border-radius: 999px;
+    }
+
+    /* Project Highlights Grid */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.85rem;
+      margin-top: 0.25rem;
+    }
+
+    .project-box {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .project-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+    }
+
+    .project-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--ink);
+      line-height: 1.35;
+    }
+
+    .project-desc {
+      font-size: 0.86rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 1rem;
+      padding: 0.85rem 0.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 860px) {
+      .span-8, .span-7, .span-6, .span-5, .span-4 { grid-column: span 12; }
+      .project-grid { grid-template-columns: 1fr; }
+      .top-links a:not(.pill-cta) { display: none; }
+    }
+
+    /* Clean Print / Save-as-PDF Styling */
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+        font-size: 11pt;
+      }
+      .topbar, .no-print, footer {
+        display: none !important;
+      }
+      .bento-wrap {
+        max-width: 100%;
+      }
+      .tile {
+        border: 1px solid #d4d4d4;
+        border-radius: 12px;
+        padding: 1.1rem;
+        break-inside: avoid;
+      }
+      .tile-lime {
+        background: #f4fce3 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bento-wrap">
+    <header class="topbar" id="topbar">
+      <a href="https://karandave-seo.github.io/" class="brand">Karan Dave</a>
+      <nav class="top-links">
+        <a href="index.html#experience">Experience</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="resume.html" class="active">Resume</a>
+        <a href="index.html#stack">Tech Stack</a>
+        <a href="https://www.linkedin.com/in/karan-dave-984a883a8/" target="_blank" rel="noopener noreferrer" class="pill-cta">LinkedIn</a>
+      </nav>
+    </header>
+
+    <main class="bento-grid">
+      <!-- Header Summary Tile -->
+      <section class="tile span-8">
+        <div>
+          <span class="eyebrow">Curriculum Vitae</span>
+          <h1>Karan Dave</h1>
+          <div class="role-sub">Technical SEO &bull; Digital Strategy &bull; Market Research</div>
+          <p class="lead">
+            Detail-oriented SEO practitioner and BBA graduate combining technical site audits, JSON-LD structured data, and organic analytics (GSC, GA4, Semrush) with structured consumer and market research.
+          </p>
+        </div>
+        <div class="action-row no-print">
+          <button type="button" class="btn" onclick="window.print()">Print / Save PDF</button>
+          <a href="case-studies.html" class="btn btn-outline">View Case Studies &rarr;</a>
+        </div>
+      </section>
+
+      <!-- Details & Links Tile -->
+      <aside class="tile tile-soft span-4">
+        <span class="eyebrow">Profile &amp; Links</span>
+        <ul class="meta-list">
+          <li>
+            <span class="meta-label">Location</span>
+            <strong>Ahmedabad, Gujarat, India</strong>
+          </li>
+          <li>
+            <span class="meta-label">Current Organization</span>
+            <a href="https://www.shaligram.io/" target="_blank" rel="noopener noreferrer" class="meta-link">SHALIGRAM</a> (SEO Trainee)
+          </li>
+          <li>
+            <span class="meta-label">Portfolio</span>
+            <a href="https://karandave-seo.github.io/" class="meta-link">karandave-seo.github.io</a>
+          </li>
+          <li>
+            <span class="meta-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/karan-dave-984a883a8/" target="_blank" rel="noopener noreferrer" class="meta-link">linkedin.com/in/karan-dave-984a883a8</a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Work Experience Tile -->
+      <section class="tile span-7">
+        <div>
+          <span class="eyebrow">Experience</span>
+          <h2>Professional Experience</h2>
+          <div class="cv-entry">
+            <div class="cv-head">
+              <div>
+                <div class="cv-title">SEO Trainee</div>
+                <div class="cv-org">SHALIGRAM &bull; Ahmedabad</div>
+              </div>
+              <span class="cv-date">Feb 2026 &ndash; Present</span>
+            </div>
+            <ul class="cv-bullets">
+              <li><strong>Technical SEO &amp; Crawl Hygiene:</strong> Conduct full site audits covering XML sitemaps, <code>robots.txt</code> directives, canonicalization, and Search Console indexing diagnostics.</li>
+              <li><strong>Structured Data &amp; Local SEO:</strong> Implement HTML and JSON-LD schema markup (<code>Person</code>, <code>Organization</code>, <code>LocalBusiness</code>) and optimize multi-branch Google Business Profiles.</li>
+              <li><strong>B2B On-Page Optimization:</strong> Execute keyword clustering, search intent mapping, and B2B service page copywriting across Odoo and WordPress websites.</li>
+              <li><strong>Performance Reporting:</strong> Track organic impressions, CTR, keyword movements, and user behavior across Google Search Console, GA4, Semrush, and Looker Studio.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education & Core Focus Lime Tile -->
+      <section class="tile tile-lime span-5">
+        <div>
+          <span class="eyebrow" style="color: var(--ink);">Academic Background</span>
+          <h2>Education</h2>
+          <div class="lime-entry">
+            <div class="cv-head">
+              <div class="cv-title">Bachelor of Business Administration (BBA)</div>
+              <span class="cv-date">Indus University</span>
+            </div>
+            <p style="font-size: 0.88rem; color: var(--ink); opacity: 0.9; margin-top: 0.25rem;">
+              Ahmedabad, Gujarat &mdash; Applied business strategy, marketing management, and quantitative consumer research to digital acquisition and search visibility.
+            </p>
+          </div>
+          <div class="lime-entry">
+            <div class="cv-head">
+              <div class="cv-title">Academic Research &amp; Dissertations</div>
+              <span class="cv-date">2026</span>
+            </div>
+            <p style="font-size: 0.88rem; color: var(--ink); opacity: 0.9; margin-top: 0.25rem;">
+              Authored primary and secondary research studies on AI-driven marketing models and consumer adoption of electric two-wheelers in Ahmedabad.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills & Stack Tile -->
+      <section class="tile span-12">
+        <span class="eyebrow">Capabilities &amp; Tooling</span>
+        <h2>Core Competencies &amp; Technical Stack</h2>
+        <div class="bento-grid" style="margin-top: 0.25rem;">
+          <div class="span-4 skill-group">
+            <span class="skill-group-label">Technical &amp; Local SEO</span>
+            <div class="pill-wrap">
+              <span class="pill">Technical Site Audits</span>
+              <span class="pill">XML Sitemaps &amp; Robots.txt</span>
+              <span class="pill">JSON-LD Schema Markup</span>
+              <span class="pill">Search Indexing &amp; Canonicals</span>
+              <span class="pill">Google Business Profile</span>
+            </div>
+          </div>
+          <div class="span-4 skill-group">
+            <span class="skill-group-label">Analytics &amp; SEO Platforms</span>
+            <div class="pill-wrap">
+              <span class="pill">Google Search Console</span>
+              <span class="pill">Google Analytics 4 (GA4)</span>
+              <span class="pill">Semrush</span>
+              <span class="pill">Looker Studio</span>
+              <span class="pill">Excel / Google Sheets</span>
+            </div>
+          </div>
+          <div class="span-4 skill-group">
+            <span class="skill-group-label">Content, CMS &amp; Research</span>
+            <div class="pill-wrap">
+              <span class="pill">Keyword Clustering</span>
+              <span class="pill">B2B Content Strategy</span>
+              <span class="pill">Odoo CMS</span>
+              <span class="pill">WordPress</span>
+              <span class="pill">HTML / CSS &amp; GitHub Pages</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Selected Projects & Research Tile -->
+      <section class="tile tile-soft span-12">
+        <div class="cv-head" style="margin-bottom: 0.65rem;">
+          <div>
+            <span class="eyebrow" style="margin-bottom: 0.25rem;">Applied Work &amp; Research</span>
+            <h2 style="margin-bottom: 0;">Selected Projects</h2>
+          </div>
+          <a href="case-studies.html" class="meta-link no-print" style="font-size: 0.88rem;">Full Case Studies &rarr;</a>
+        </div>
+        <div class="project-grid">
+          <div class="project-box">
+            <div>
+              <span class="project-tag">Local SEO &amp; Structured Data</span>
+              <div class="project-title" style="margin-top: 0.3rem;">Multi-Branch Retail SEO &amp; Looker Studio Reporting</div>
+            </div>
+            <p class="project-desc">
+              Executed local SEO, Google Business Profile optimization, branch-specific JSON-LD schema, and Looker Studio performance reporting for an Odoo-based jewellery brand in Ahmedabad.
+            </p>
+          </div>
+          <div class="project-box">
+            <div>
+              <span class="project-tag">Strategic AI &amp; Marketing</span>
+              <div class="project-title" style="margin-top: 0.3rem;">Integration of AI in Marketing</div>
+            </div>
+            <p class="project-desc">
+              Evaluated AI-driven marketing architectures across Meta Platforms, Amazon, Spotify, and Netflix using the Mechanical, Thinking, and Feeling AI framework.
+            </p>
+          </div>
+          <div class="project-box">
+            <div>
+              <span class="project-tag">Consumer &amp; Market Research</span>
+              <div class="project-title" style="margin-top: 0.3rem;">EV Two-Wheeler Purchase Drivers in Ahmedabad</div>
+            </div>
+            <p class="project-desc">
+              Conducted primary market research analyzing price sensitivity, range expectations, charging infrastructure, and brand perception among urban two-wheeler buyers.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a href="https://karandave-seo.github.io/">Home</a>
+      &bull;
+      <a href="case-studies.html">Case Studies</a>
+      &bull;
+      <a href="https://www.linkedin.com/in/karan-dave-984a883a8/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      &bull;
+      Ahmedabad
+    </footer>
+  </div>
+
+  <script>
+    const topbar = document.getElementById('topbar');
+    const maxScroll = 140;
+    const minAlpha = 0.78;
+
+    function updateTopbarOnScroll() {
+      const progress = Math.min(window.scrollY / maxScroll, 1);
+      const alpha = 1 - progress * (1 - minAlpha);
+      const blur = progress * 12;
+
+      topbar.style.background = `rgba(255, 255, 255, ${alpha.toFixed(3)})`;
+      topbar.style.backdropFilter = `blur(${blur.toFixed(1)}px)`;
+      topbar.style.webkitBackdropFilter = `blur(${blur.toFixed(1)}px)`;
+      topbar.classList.toggle('is-scrolled', window.scrollY > 8);
+    }
+
+    window.addEventListener('scroll', updateTopbarOnScroll, { passive: true });
+    updateTopbarOnScroll();
+  </script>
+</body>
+</html>
