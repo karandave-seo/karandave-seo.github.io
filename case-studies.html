@@ -18,7 +18,7 @@
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Karan Dave — Technical SEO &amp; Market Research Case Studies" />
+  <meta property="og:image:alt" content="Karan Dave — Technical SEO & Market Research Case Studies" />
 
   <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -117,25 +117,6 @@
       border-radius: 999px;
     }
 
-    /* Mobile Table of Contents Strip */
-    .mobile-toc {
-      display: none;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-      margin-bottom: 1rem;
-    }
-
-    .mobile-toc a {
-      text-decoration: none;
-      background: var(--tile);
-      border: 1px solid var(--line);
-      color: var(--ink);
-      font-size: 0.8rem;
-      font-weight: 600;
-      padding: 0.35rem 0.7rem;
-      border-radius: 999px;
-    }
-
     /* Bento Grid */
     .bento-grid {
       display: grid;
@@ -198,12 +179,31 @@
       max-width: 58ch;
     }
 
-    .case-header {
+    .anchor-list {
+      list-style: none;
       display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 1rem;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 0.65rem;
+      font-size: 0.9rem;
+    }
+
+    .anchor-list li {
+      padding-bottom: 0.6rem;
+      border-bottom: 1px dashed var(--line);
+    }
+
+    .anchor-list li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .anchor-label {
+      display: block;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      font-weight: 700;
     }
 
     .pill-wrap {
@@ -226,6 +226,17 @@
     .pill-lime {
       background: var(--lime);
       border-color: #bef264;
+    }
+
+    .pill-link {
+      text-decoration: none;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    .pill-link:hover {
+      border-color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     .case-points {
@@ -261,49 +272,6 @@
       margin-top: 0.2rem;
     }
 
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.88rem;
-      padding: 0.58rem 1.05rem;
-      border-radius: 12px;
-      background: var(--ink);
-      color: #fff;
-      border: 1px solid var(--ink);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--ink);
-      border: 1px solid var(--line);
-    }
-
-    .btn-sm {
-      font-size: 0.82rem;
-      padding: 0.48rem 0.9rem;
-      border-radius: 10px;
-    }
-
-    .toc-index-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.55rem;
-      font-size: 0.9rem;
-    }
-
-    .toc-index-list a {
-      color: var(--ink);
-      font-weight: 600;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-    .toc-index-list a:hover {
-      color: var(--accent);
-    }
-
     /* Footer */
     footer {
       margin-top: 1rem;
@@ -328,7 +296,6 @@
       .span-8, .span-4 { grid-column: span 12; }
       .case-points { grid-template-columns: 1fr; }
       .top-links a:not(.pill-cta) { display: none; }
-      .mobile-toc { display: flex; }
     }
   </style>
 </head>
@@ -346,13 +313,6 @@
       </nav>
     </header>
 
-    <div class="mobile-toc" aria-label="Jump to case study">
-      <a href="#shree-swaminarayan-jewellers">01. Shree Swaminarayan Jewellers</a>
-      <a href="#b2b-technical-seo">02. B2B SEO</a>
-      <a href="#ai-marketing">03. AI Marketing</a>
-      <a href="#ev-consumer-study">04. EV Study</a>
-    </div>
-
     <main class="bento-grid">
       <!-- Intro Tile -->
       <section class="tile span-8">
@@ -363,37 +323,38 @@
             Practical search execution, structured reporting, and research projects spanning retail local SEO, B2B architecture, AI-driven marketing models, and EV buyer behavior.
           </p>
         </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.1rem;">
-          <a href="#shree-swaminarayan-jewellers" class="btn">Jump to Case Studies</a>
-          <a href="resume.html" class="btn btn-outline">View Resume &rarr;</a>
-        </div>
       </section>
 
-      <!-- Table of Contents Tile -->
+      <!-- Overview Tile (Replaces Table of Contents Box) -->
       <aside class="tile tile-soft span-4">
-        <span class="eyebrow">Table of Contents</span>
-        <ul class="toc-index-list">
-          <li><a href="#shree-swaminarayan-jewellers">01. Shree Swaminarayan Jewellers — Local SEO &amp; Reporting</a></li>
-          <li><a href="#b2b-technical-seo">02. B2B Service Architecture — Audits &amp; Clustering</a></li>
-          <li><a href="#ai-marketing">03. Integration of AI in Marketing</a></li>
-          <li><a href="#ev-consumer-study">04. EV Two-Wheeler Purchase Behavior (Ahmedabad)</a></li>
+        <span class="eyebrow">At a Glance</span>
+        <ul class="anchor-list">
+          <li>
+            <span class="anchor-label">Current Role</span>
+            <strong>SEO Analyst</strong> &mdash; SHALIGRAM
+          </li>
+          <li>
+            <span class="anchor-label">Core Pillars</span>
+            Technical SEO, Schema, Analytics &amp; Research
+          </li>
+          <li>
+            <span class="anchor-label">Based In</span>
+            <strong>Ahmedabad</strong>, Gujarat
+          </li>
         </ul>
       </aside>
 
       <!-- Case Study 01: Shree Swaminarayan Jewellers -->
       <section id="shree-swaminarayan-jewellers" class="tile span-12">
-        <div class="case-header">
-          <div>
-            <span class="eyebrow">Case Study 01 &bull; Local &amp; Retail SEO</span>
-            <h2>Multi-Location Retail E-Commerce: Local SEO, Schema &amp; Reporting</h2>
-          </div>
-          <a href="https://share.google/E3iMDnfuaApaYKx57" target="_blank" rel="noopener noreferrer" class="btn btn-sm">View Shree Swaminarayan Jewellers &rarr;</a>
+        <div>
+          <span class="eyebrow">Case Study 01 &bull; Local &amp; Retail SEO</span>
+          <h2>Multi-Location Retail E-Commerce: Local SEO, Schema &amp; Reporting</h2>
         </div>
 
         <div class="pill-wrap">
-          <span class="pill pill-lime">Client: Shree Swaminarayan Jewellers</span>
           <span class="pill">CMS: Odoo</span>
           <span class="pill">Stack: GBP, JSON-LD, GSC, GA4, Looker Studio</span>
+          <a href="https://share.google/E3iMDnfuaApaYKx57" target="_blank" rel="noopener noreferrer" class="pill pill-lime pill-link">Client: Shree Swaminarayan Jewellers &nearr;</a>
         </div>
 
         <div class="case-points">
@@ -422,12 +383,9 @@
 
       <!-- Case Study 02: B2B Service Architecture -->
       <section id="b2b-technical-seo" class="tile span-12">
-        <div class="case-header">
-          <div>
-            <span class="eyebrow">Case Study 02 &bull; Technical &amp; On-Page SEO</span>
-            <h2>B2B Service Architecture: Technical Audits &amp; Intent Clustering</h2>
-          </div>
-          <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="btn btn-sm btn-outline">&uarr; Top of Page</a>
+        <div>
+          <span class="eyebrow">Case Study 02 &bull; Technical &amp; On-Page SEO</span>
+          <h2>B2B Service Architecture: Technical Audits &amp; Intent Clustering</h2>
         </div>
 
         <div class="pill-wrap">
@@ -462,12 +420,9 @@
 
       <!-- Case Study 03: Integration of AI in Marketing -->
       <section id="ai-marketing" class="tile tile-lime span-12">
-        <div class="case-header">
-          <div>
-            <span class="eyebrow" style="color: var(--ink);">Case Study 03 &bull; Strategic AI &amp; Marketing</span>
-            <h2>Integration of AI in Marketing</h2>
-          </div>
-          <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="btn btn-sm">&uarr; Top of Page</a>
+        <div>
+          <span class="eyebrow" style="color: var(--ink);">Case Study 03 &bull; Strategic AI &amp; Marketing</span>
+          <h2>Integration of AI in Marketing</h2>
         </div>
 
         <p style="font-size: 0.94rem; color: var(--ink); margin: 0.55rem 0 0.85rem; max-width: 78ch;">
@@ -492,12 +447,9 @@
 
       <!-- Case Study 04: EV Two-Wheeler Purchase Behavior -->
       <section id="ev-consumer-study" class="tile span-12">
-        <div class="case-header">
-          <div>
-            <span class="eyebrow">Case Study 04 &bull; Consumer &amp; Market Research</span>
-            <h2>Factors Influencing Electric Two-Wheeler Purchases in Ahmedabad</h2>
-          </div>
-          <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="btn btn-sm btn-outline">&uarr; Top of Page</a>
+        <div>
+          <span class="eyebrow">Case Study 04 &bull; Consumer &amp; Market Research</span>
+          <h2>Factors Influencing Electric Two-Wheeler Purchases in Ahmedabad</h2>
         </div>
 
         <div class="pill-wrap">
