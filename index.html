@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Karan Dave | Technical SEO, Digital Strategy &amp; Market Research</title>
-  <meta name="description" content="Digital strategy, technical SEO, and market research by Karan Dave in Ahmedabad. See case studies, analytics stack (GA4, GSC, Semrush, Looker Studio), and measured growth results." />
+  <meta name="description" content="Digital strategy, technical SEO, and market research by Karan Dave in Ahmedabad. See case studies, analytics stack (GA4, GSC, Semrush, Looker Studio), and experience." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://karandave-seo.github.io/" />
 
@@ -12,7 +12,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://karandave-seo.github.io/" />
   <meta property="og:title" content="Karan Dave | Technical SEO, Digital Strategy &amp; Market Research" />
-  <meta property="og:description" content="Digital strategy, technical SEO, and market research by Karan Dave in Ahmedabad. See case studies, analytics stack (GA4, GSC, Semrush, Looker Studio), and measured growth results." />
+  <meta property="og:description" content="Digital strategy, technical SEO, and market research by Karan Dave in Ahmedabad. See case studies, analytics stack (GA4, GSC, Semrush, Looker Studio), and experience." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,6 +38,16 @@
       "@type": "EducationalOrganization",
       "name": "Indus University"
     },
+    "knowsAbout": [
+      "Technical SEO",
+      "Search Engine Optimization",
+      "Google Search Console",
+      "Google Analytics 4",
+      "JSON-LD Schema Markup",
+      "Keyword Research",
+      "Market Research",
+      "B2B Content Strategy"
+    ],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Ahmedabad",
@@ -228,41 +238,67 @@
 
     .anchor-link:hover { color: var(--accent); }
 
-    /* Metrics inside Lime Tile */
-    .metrics-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.85rem;
-      margin: 1.25rem 0;
+    /* Experience & Education inside Lime Tile */
+    .exp-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin: 0.85rem 0 1.1rem;
     }
 
-    .metric-box {
-      background: rgba(255, 255, 255, 0.45);
-      border: 1px solid rgba(20, 33, 29, 0.12);
-      border-radius: 16px;
-      padding: 1rem 0.75rem;
-      text-align: center;
+    .exp-card {
+      background: rgba(255, 255, 255, 0.55);
+      border: 1px solid rgba(20, 33, 29, 0.14);
+      border-radius: 15px;
+      padding: 0.9rem 1.05rem;
     }
 
-    .metric-num {
-      font-family: 'Fraunces', serif;
-      font-size: 1.9rem;
-      font-weight: 700;
-      line-height: 1.1;
+    .exp-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem;
+      flex-wrap: wrap;
       margin-bottom: 0.25rem;
     }
 
-    .metric-txt {
-      font-size: 0.82rem;
-      font-weight: 600;
+    .exp-role {
+      font-weight: 700;
+      font-size: 0.96rem;
+      color: var(--ink);
+    }
+
+    .exp-date {
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      opacity: 0.75;
+    }
+
+    .exp-desc {
+      font-size: 0.88rem;
+      color: var(--ink);
+      opacity: 0.88;
+      line-height: 1.5;
+    }
+
+    .lime-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      padding-top: 0.85rem;
+      border-top: 1px dashed rgba(20, 33, 29, 0.22);
     }
 
     .lime-note {
-      font-size: 0.88rem;
+      font-size: 0.84rem;
       color: var(--ink);
       opacity: 0.85;
-      padding-top: 0.85rem;
-      border-top: 1px dashed rgba(20, 33, 29, 0.2);
+      font-weight: 500;
     }
 
     /* What I Do Stack */
@@ -302,6 +338,39 @@
       color: #fff;
       margin-right: 0.5rem;
       margin-top: 0.25rem;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+
+    .btn-sm {
+      font-size: 0.82rem;
+      padding: 0.48rem 0.9rem;
+      border-radius: 10px;
+      margin: 0;
+    }
+
+    .case-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .text-link {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .text-link:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     .quote {
@@ -399,7 +468,7 @@
 
     @media (max-width: 860px) {
       .span-8, .span-6, .span-4 { grid-column: span 12; }
-      .metrics-row, .case-points, .stack-grid { grid-template-columns: 1fr; }
+      .case-points, .stack-grid { grid-template-columns: 1fr; }
       .top-links a:not(.pill-cta) { display: none; }
     }
   </style>
@@ -409,8 +478,9 @@
     <header class="topbar" id="topbar">
       <a href="#" class="brand">Karan Dave</a>
       <nav class="top-links">
-        <a href="#work">Work</a>
-        <a href="#research">Case Study</a>
+        <a href="#experience">Experience</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="blog.html">Blog</a>
         <a href="#stack">Tech Stack</a>
         <a href="https://www.linkedin.com/in/karan-dave-984a883a8/" target="_blank" rel="noopener noreferrer" class="pill-cta">LinkedIn</a>
       </nav>
@@ -427,7 +497,8 @@
           </p>
         </div>
         <div>
-          <a href="#research" class="btn">Read Case Study</a>
+          <a href="#research" class="btn">Featured Study</a>
+          <a href="case-studies.html" class="btn btn-outline">All Case Studies &rarr;</a>
         </div>
       </section>
 
@@ -454,29 +525,36 @@
         </ul>
       </aside>
 
-      <!-- Impact Metrics Tile -->
-      <section id="work" class="tile tile-lime span-6">
+      <!-- Experience & Education Lime Tile -->
+      <section id="experience" class="tile tile-lime span-6">
         <div>
-          <span class="eyebrow" style="color: var(--ink);">Measured Outcomes</span>
-          <h2>Search &amp; Growth Snapshot</h2>
-          <div class="metrics-row">
-            <div class="metric-box">
-              <div class="metric-num">2+</div>
-              <div class="metric-txt">Case Studies</div>
+          <span class="eyebrow" style="color: var(--ink);">Background &amp; Credentials</span>
+          <h2>Experience &amp; Education</h2>
+          <div class="exp-stack">
+            <div class="exp-card">
+              <div class="exp-top">
+                <span class="exp-role">SEO Trainee &mdash; SHALIGRAM</span>
+                <span class="exp-date">Feb 2026 &ndash; Present</span>
+              </div>
+              <p class="exp-desc">
+                Executing technical SEO audits, B2B page optimization, JSON-LD schema implementation, and organic tracking via GSC &amp; GA4.
+              </p>
             </div>
-            <div class="metric-box">
-              <div class="metric-num">150%</div>
-              <div class="metric-txt">Avg. Traffic Lift</div>
-            </div>
-            <div class="metric-box">
-              <div class="metric-num">25+</div>
-              <div class="metric-txt">Page-1 Keywords</div>
+            <div class="exp-card">
+              <div class="exp-top">
+                <span class="exp-role">BBA &mdash; Indus University</span>
+                <span class="exp-date">Ahmedabad</span>
+              </div>
+              <p class="exp-desc">
+                Business management foundation applied to search intent analysis, consumer research, and conversion-focused marketing.
+              </p>
             </div>
           </div>
         </div>
-        <p class="lime-note">
-          Benchmarked across search visibility audits, keyword clustering, and organic performance tracking.
-        </p>
+        <div class="lime-footer">
+          <span class="lime-note">Full career &amp; academic record</span>
+          <a href="resume.html" class="btn btn-sm">View Resume &rarr;</a>
+        </div>
       </section>
 
       <!-- Capabilities Tile -->
@@ -503,8 +581,13 @@
 
       <!-- Featured Case Study Tile -->
       <section id="research" class="tile span-12">
-        <span class="eyebrow">Featured Case Study &bull; Strategic AI &amp; Marketing</span>
-        <h2>Integration of AI in Marketing</h2>
+        <div class="case-header">
+          <div>
+            <span class="eyebrow">Featured Case Study &bull; Strategic AI &amp; Marketing</span>
+            <h2>Integration of AI in Marketing</h2>
+          </div>
+          <a href="case-studies.html" class="text-link">Explore All Case Studies &rarr;</a>
+        </div>
         <p class="quote">“How distinct AI-driven business models shape marketing strategy across Meta Platforms, Amazon, Spotify, and Netflix.”</p>
         <p style="font-size: 0.95rem; margin-bottom: 0.35rem;">
           <strong>Core Takeaway:</strong> Long-term marketing advantage comes not merely from adopting AI, but from aligning specific AI capabilities—mapped across Mechanical, Thinking, and Feeling AI—with core business objectives while addressing market competition and ethics.
@@ -536,7 +619,6 @@
               <span class="tool-pill">GA4</span>
               <span class="tool-pill">Semrush</span>
               <span class="tool-pill">Google Business Profile</span>
-              <span class="tool-pill">Ahrefs</span>
             </div>
           </div>
           <div class="stack-group">
