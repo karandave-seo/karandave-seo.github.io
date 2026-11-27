@@ -19,7 +19,12 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Karan Dave — Technical SEO, Analytics & Market Research" />
-
+<script>
+  if (window.location.pathname.endsWith('/index.html')) {
+    const cleanPath = window.location.pathname.replace(/index\.html$/, '');
+    window.location.replace(cleanPath + window.location.search + window.location.hash);
+  }
+</script>
   <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Karan Dave | Technical SEO, Digital Strategy &amp; Market Research" />
