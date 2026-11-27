@@ -489,9 +489,58 @@
       text-underline-offset: 3px;
     }
 
+   /* Dedicated What I Can Do Grid (Step 4) */
+    .cap-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .cap-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1.15rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .cap-card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.08rem;
+      line-height: 1.25;
+      color: var(--ink);
+      margin-bottom: 0.35rem;
+    }
+
+    .cap-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .cap-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .cap-tag {
+      background: var(--tile);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+    }
+
     @media (max-width: 860px) {
       .span-8, .span-6, .span-4 { grid-column: span 12; }
-      .case-points, .stack-grid { grid-template-columns: 1fr; }
+      .case-points, .stack-grid, .cap-grid { grid-template-columns: 1fr; }
       .top-links a:not(.pill-cta) { display: none; }
     }
   </style>
