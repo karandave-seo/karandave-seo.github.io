@@ -141,7 +141,7 @@
 
     .top-links {
       display: flex;
-      gap: 1.25rem;
+      gap: 1.15rem;
       align-items: center;
       font-size: 0.9rem;
       font-weight: 600;
@@ -261,11 +261,104 @@
 
     .anchor-link:hover { color: var(--accent); }
 
-    /* Experience & Education inside Lime Tile */
-    .exp-stack {
+    /* Dedicated What I Can Do Grid (Step 4) */
+    .cap-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .cap-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1.15rem 1.25rem;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       gap: 0.75rem;
+    }
+
+    .cap-card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.08rem;
+      line-height: 1.25;
+      color: var(--ink);
+      margin-bottom: 0.35rem;
+    }
+
+    .cap-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .cap-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .cap-tag {
+      background: var(--tile);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+    }
+
+    /* 5-Step Approach Grid (Step 5) */
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .approach-step {
+      background: var(--tile);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1rem 1.05rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .step-num {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      background: var(--lime);
+      border: 1px solid #bef264;
+      padding: 0.18rem 0.52rem;
+      border-radius: 999px;
+      width: fit-content;
+    }
+
+    .approach-step h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 0.98rem;
+      line-height: 1.25;
+      color: var(--ink);
+    }
+
+    .approach-step p {
+      font-size: 0.84rem;
+      color: var(--muted);
+      line-height: 1.48;
+    }
+
+    /* Experience & Education inside Lime Tile */
+    .exp-stack {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.85rem;
       margin: 0.85rem 0 1.1rem;
     }
 
@@ -273,7 +366,7 @@
       background: rgba(255, 255, 255, 0.55);
       border: 1px solid rgba(20, 33, 29, 0.14);
       border-radius: 15px;
-      padding: 0.9rem 1.05rem;
+      padding: 0.95rem 1.1rem;
     }
 
     .exp-top {
@@ -322,32 +415,6 @@
       color: var(--ink);
       opacity: 0.85;
       font-weight: 500;
-    }
-
-    /* What I Do Stack */
-    .skill-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      margin-top: 0.85rem;
-    }
-
-    .skill-row {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 0.8rem 1rem;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .skill-row strong {
-      color: var(--ink);
-      display: block;
-      font-size: 0.84rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      margin-bottom: 0.2rem;
     }
 
     .btn {
@@ -489,163 +556,33 @@
       text-underline-offset: 3px;
     }
 
-   /* Dedicated What I Can Do Grid (Step 4) */
-    .cap-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.9rem;
-      margin-top: 1rem;
-    }
-
-    .cap-card {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 1.15rem 1.25rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 0.75rem;
-    }
-
-    .cap-card h3 {
-      font-family: 'Fraunces', serif;
-      font-size: 1.08rem;
-      line-height: 1.25;
-      color: var(--ink);
-      margin-bottom: 0.35rem;
-    }
-
-    .cap-card p {
-      font-size: 0.88rem;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    .cap-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
-
-    .cap-tag {
-      background: var(--tile);
-      border: 1px solid var(--line);
-      color: var(--ink);
-      font-size: 0.78rem;
-      font-weight: 600;
-      padding: 0.25rem 0.6rem;
-      border-radius: 999px;
+    @media (max-width: 960px) {
+      .approach-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 860px) {
       .span-8, .span-6, .span-4 { grid-column: span 12; }
-      .case-points, .stack-grid, .cap-grid, .approach-grid { grid-template-columns: 1fr; }
+      .case-points, .stack-grid, .cap-grid, .exp-stack, .approach-grid { grid-template-columns: 1fr; }
       .top-links a:not(.pill-cta) { display: none; }
-      </style>
-</head>
     }
-  <!-- How I Approach Marketing Challenges (Step 5) -->
-      <section id="approach" class="tile tile-soft span-12">
-        <div>
-          <span class="eyebrow">Strategic Thinking &bull; Problem-Solving Process</span>
-          <h2>How I Approach Marketing Challenges</h2>
-          <p class="lead" style="margin-bottom: 0.25rem; max-width: 76ch;">
-            I believe marketing is not simply about increasing traffic or promoting products. It is about understanding customers, identifying opportunities, and connecting business objectives with measurable marketing activities.
-          </p>
-        </div>
-
-        <div class="approach-grid">
-          <div class="approach-step">
-            <span class="step-num">01</span>
-            <h3>Understand the Business</h3>
-            <p>Understand the business model, products, services, target audience, competitive landscape, and growth objectives.</p>
-          </div>
-
-          <div class="approach-step">
-            <span class="step-num">02</span>
-            <h3>Research &amp; Analyze</h3>
-            <p>Analyze customer behavior, market trends, search demand, competitors, and available performance data.</p>
-          </div>
-
-          <div class="approach-step">
-            <span class="step-num">03</span>
-            <h3>Identify Opportunities</h3>
-            <p>Identify gaps, challenges, and opportunities across marketing channels, content, customer journeys, and digital experiences.</p>
-          </div>
-
-          <div class="approach-step">
-            <span class="step-num">04</span>
-            <h3>Develop a Strategy</h3>
-            <p>Translate research findings into actionable marketing recommendations aligned with business objectives.</p>
-          </div>
-
-          <div class="approach-step">
-            <span class="step-num">05</span>
-            <h3>Measure &amp; Evaluate</h3>
-            <p>Identify relevant KPIs, evaluate performance, and use data to recommend continuous improvements.</p>
-          </div>
-        </div>
-      </section>
-    /* 5-Step Approach Grid (Step 5) */
-    .approach-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 0.75rem;
-      margin-top: 1rem;
-    }
-
-    .approach-step {
-      background: var(--tile);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 1rem 1.05rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-    }
-
-    .step-num {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      color: var(--accent);
-      background: var(--lime);
-      border: 1px solid #bef264;
-      padding: 0.18rem 0.52rem;
-      border-radius: 999px;
-      width: fit-content;
-    }
-
-    .approach-step h3 {
-      font-family: 'Fraunces', serif;
-      font-size: 0.98rem;
-      line-height: 1.25;
-      color: var(--ink);
-    }
-
-    .approach-step p {
-      font-size: 0.84rem;
-      color: var(--muted);
-      line-height: 1.48;
-    }
+  </style>
 </head>
 <body>
   <div class="bento-wrap">
     <header class="topbar" id="topbar">
       <a href="/" class="brand" id="brand-home-link">Karan Dave</a>
       <nav class="top-links">
-        <a href="#experience">Experience</a>
-        <a href="case-studies.html">Case Studies</a>
+        <a href="#about">About</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#approach">Approach</a>
+        <a href="case-studies.html">Projects</a>
         <a href="resume.html">Resume</a>
-        <a href="#stack">Tech Stack</a>
         <a href="https://www.linkedin.com/in/karan-dave-984a883a8/" target="_blank" rel="noopener noreferrer" class="pill-cta">LinkedIn</a>
       </nav>
     </header>
 
     <main class="bento-grid">
-      <!-- Revised Hero Tile (Step 2) -->
+      <!-- 01. Revised Hero Tile -->
       <section class="tile span-8">
         <div>
           <span class="eyebrow">Digital Marketing &bull; SEO &bull; Marketing Analytics &bull; Market Research</span>
@@ -655,7 +592,7 @@
           </p>
         </div>
         <div>
-          <a href="#about" class="btn">Explore My Capabilities</a>
+          <a href="#capabilities" class="btn">Explore My Capabilities</a>
           <a href="case-studies.html" class="btn btn-outline">View My Projects</a>
           <a href="resume.html" class="btn btn-outline">Resume</a>
         </div>
@@ -688,59 +625,7 @@
         </ul>
       </aside>
 
-      <!-- Experience & Education Lime Tile -->
-      <section id="experience" class="tile tile-lime span-6">
-        <div>
-          <span class="eyebrow" style="color: var(--ink);">Background &amp; Credentials</span>
-          <h2>Experience &amp; Education</h2>
-          <div class="exp-stack">
-            <div class="exp-card">
-              <div class="exp-top">
-                <span class="exp-role">SEO Analyst &mdash; SHALIGRAM</span>
-                <span class="exp-date">Mar 2026 &ndash; Present</span>
-              </div>
-              <p class="exp-desc">
-                Conducting technical SEO audits, B2B page optimization, JSON-LD schema implementation, and search performance tracking using GSC, GA4, Semrush &amp; Ahrefs.
-              </p>
-            </div>
-            <div class="exp-card">
-              <div class="exp-top">
-                <span class="exp-role">BBA &mdash; Indus University</span>
-                <span class="exp-date">Ahmedabad</span>
-              </div>
-              <p class="exp-desc">
-                Applying business administration principles to search intent analysis, consumer research, and growth-oriented marketing decisions.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="lime-footer">
-          <span class="lime-note">Full career &amp; academic record</span>
-          <a href="resume.html" class="btn btn-sm">View Resume &rarr;</a>
-        </div>
-      </section>
-
-      <!-- Capabilities Tile -->
-      <section class="tile span-6">
-        <div>
-          <span class="eyebrow">What I Do</span>
-          <h2>SEO, Marketing Analytics &amp; Research</h2>
-          <div class="skill-stack">
-            <div class="skill-row">
-              <strong>Search Engine Optimization</strong>
-              Identify technical SEO issues, optimize on-page structure, build keyword clusters, and analyze search intent and schema markup.
-            </div>
-            <div class="skill-row">
-              <strong>Marketing Analytics &amp; Insights</strong>
-              Interpret website traffic, user behavior, and organic search performance using GA4, Search Console, Semrush, and Ahrefs.
-            </div>
-            <div class="skill-row">
-              <strong>Market &amp; Consumer Research</strong>
-              Analyze market trends, consumer behavior, and competitive positioning backed by structured research and business fundamentals.
-            </div>
-          </div>
-        </div>
-      </section><!-- Revised About Me Tile (Step 3) -->
+      <!-- 02. Revised About Me Tile -->
       <section id="about" class="tile tile-soft span-12">
         <div class="case-header">
           <div>
@@ -789,14 +674,166 @@
         </div>
       </section>
 
-      <!-- Featured Case Study Tile -->
+      <!-- 03. Dedicated What I Can Do Section -->
+      <section id="capabilities" class="tile span-12">
+        <div class="case-header">
+          <div>
+            <span class="eyebrow">Core Capabilities &bull; Action-Oriented Skills</span>
+            <h2>What I Can Do</h2>
+          </div>
+          <a href="case-studies.html" class="text-link">See Applied Work &rarr;</a>
+        </div>
+        <p class="lead" style="margin-bottom: 0.25rem; max-width: 72ch;">
+          Combining marketing fundamentals, analytical capabilities, and digital tools to address real-world business and marketing challenges.
+        </p>
+
+        <div class="cap-grid">
+          <div class="cap-card">
+            <div>
+              <h3>Search Engine Optimization (SEO)</h3>
+              <p>Analyze websites to identify opportunities for improving organic search visibility, crawlability, indexability, content relevance, and overall search performance.</p>
+            </div>
+            <div class="cap-tags">
+              <span class="cap-tag">Technical SEO Audits</span>
+              <span class="cap-tag">On-Page SEO</span>
+              <span class="cap-tag">Keyword Research &amp; Clustering</span>
+              <span class="cap-tag">Search Intent Analysis</span>
+              <span class="cap-tag">Competitor SEO Analysis</span>
+              <span class="cap-tag">Internal Linking</span>
+              <span class="cap-tag">Local SEO</span>
+              <span class="cap-tag">Structured Data (JSON-LD)</span>
+            </div>
+          </div>
+
+          <div class="cap-card">
+            <div>
+              <h3>Marketing Analytics &amp; Reporting</h3>
+              <p>Interpret marketing and website performance data to identify trends, understand user behavior, and support informed marketing decisions.</p>
+            </div>
+            <div class="cap-tags">
+              <span class="cap-tag">Website Traffic Analysis</span>
+              <span class="cap-tag">Organic Search Performance</span>
+              <span class="cap-tag">User Acquisition Analysis</span>
+              <span class="cap-tag">Marketing KPI Identification</span>
+              <span class="cap-tag">Conversion Funnel Analysis</span>
+              <span class="cap-tag">Performance Reporting</span>
+              <span class="cap-tag">Data Visualization</span>
+            </div>
+          </div>
+
+          <div class="cap-card">
+            <div>
+              <h3>Content Marketing &amp; Strategy</h3>
+              <p>Identify content opportunities based on audience needs, search behavior, competitive gaps, and business objectives.</p>
+            </div>
+            <div class="cap-tags">
+              <span class="cap-tag">Content Gap Analysis</span>
+              <span class="cap-tag">SEO Content Planning</span>
+              <span class="cap-tag">Topic Clustering</span>
+              <span class="cap-tag">Content Optimization</span>
+              <span class="cap-tag">Keyword Mapping</span>
+              <span class="cap-tag">Search-Focused Content Briefs</span>
+            </div>
+          </div>
+
+          <div class="cap-card">
+            <div>
+              <h3>Market &amp; Consumer Research</h3>
+              <p>Explore market dynamics, customer preferences, competitive landscapes, and purchasing behavior to support business and marketing decisions.</p>
+            </div>
+            <div class="cap-tags">
+              <span class="cap-tag">Primary &amp; Secondary Research</span>
+              <span class="cap-tag">Consumer Behavior Analysis</span>
+              <span class="cap-tag">Competitor Research</span>
+              <span class="cap-tag">Market Segmentation</span>
+              <span class="cap-tag">SWOT Analysis</span>
+              <span class="cap-tag">Survey Analysis</span>
+            </div>
+          </div>
+
+          <div class="cap-card">
+            <div>
+              <h3>Digital Marketing Strategy</h3>
+              <p>Apply marketing principles and digital channel knowledge to identify opportunities for customer acquisition, audience engagement, and brand visibility.</p>
+            </div>
+            <div class="cap-tags">
+              <span class="cap-tag">Target Audience Identification</span>
+              <span class="cap-tag">Customer Journey Mapping</span>
+              <span class="cap-tag">Marketing Funnel Analysis</span>
+              <span class="cap-tag">Digital Channel Selection</span>
+              <span class="cap-tag">B2B &amp; B2C Concepts</span>
+              <span class="cap-tag">Lead Generation Strategy</span>
+            </div>
+          </div>
+
+          <div class="cap-card">
+            <div>
+              <h3>AI in Marketing</h3>
+              <p>Understand how artificial intelligence supports marketing personalization, customer engagement, research workflows, and strategic decision-making.</p>
+            </div>
+            <div class="cap-tags">
+              <span class="cap-tag">AI-Powered Marketing Research</span>
+              <span class="cap-tag">AI Personalization Models</span>
+              <span class="cap-tag">Generative AI Workflows</span>
+              <span class="cap-tag">Recommendation Systems</span>
+              <span class="cap-tag">AI-Assisted Content Research</span>
+              <span class="cap-tag">Responsible AI Usage</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04. How I Approach Marketing Challenges -->
+      <section id="approach" class="tile tile-soft span-12">
+        <div>
+          <span class="eyebrow">Strategic Thinking &bull; Problem-Solving Process</span>
+          <h2>How I Approach Marketing Challenges</h2>
+          <p class="lead" style="margin-bottom: 0.25rem; max-width: 76ch;">
+            I believe marketing is not simply about increasing traffic or promoting products. It is about understanding customers, identifying opportunities, and connecting business objectives with measurable marketing activities.
+          </p>
+        </div>
+
+        <div class="approach-grid">
+          <div class="approach-step">
+            <span class="step-num">01</span>
+            <h3>Understand the Business</h3>
+            <p>Understand the business model, products, services, target audience, competitive landscape, and growth objectives.</p>
+          </div>
+
+          <div class="approach-step">
+            <span class="step-num">02</span>
+            <h3>Research &amp; Analyze</h3>
+            <p>Analyze customer behavior, market trends, search demand, competitors, and available performance data.</p>
+          </div>
+
+          <div class="approach-step">
+            <span class="step-num">03</span>
+            <h3>Identify Opportunities</h3>
+            <p>Identify gaps, challenges, and opportunities across marketing channels, content, customer journeys, and digital experiences.</p>
+          </div>
+
+          <div class="approach-step">
+            <span class="step-num">04</span>
+            <h3>Develop a Strategy</h3>
+            <p>Translate research findings into actionable marketing recommendations aligned with business objectives.</p>
+          </div>
+
+          <div class="approach-step">
+            <span class="step-num">05</span>
+            <h3>Measure &amp; Evaluate</h3>
+            <p>Identify relevant KPIs, evaluate performance, and use data to recommend continuous improvements.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05. Featured Case Study & Research Tile -->
       <section id="research" class="tile span-12">
         <div class="case-header">
           <div>
             <span class="eyebrow">Featured Case Study &bull; Strategic AI &amp; Marketing</span>
             <h2>Integration of AI in Marketing</h2>
           </div>
-          <a href="case-studies.html" class="text-link">Explore All Case Studies &rarr;</a>
+          <a href="case-studies.html" class="text-link">Explore All Projects &amp; Studies &rarr;</a>
         </div>
         <p class="quote">“How distinct AI-driven business models shape marketing strategy across Meta Platforms, Amazon, Spotify, and Netflix.”</p>
         <p style="font-size: 0.95rem; margin-bottom: 0.35rem;">
@@ -818,7 +855,39 @@
         </div>
       </section>
 
-      <!-- Tools & Tech Stack Tile -->
+      <!-- 06. Experience & Education Lime Tile -->
+      <section id="experience" class="tile tile-lime span-12">
+        <div>
+          <span class="eyebrow" style="color: var(--ink);">Background &amp; Credentials</span>
+          <h2>Experience &amp; Education</h2>
+          <div class="exp-stack">
+            <div class="exp-card">
+              <div class="exp-top">
+                <span class="exp-role">SEO Analyst &mdash; SHALIGRAM</span>
+                <span class="exp-date">Feb 2026 &ndash; Present</span>
+              </div>
+              <p class="exp-desc">
+                Conducting technical SEO audits, B2B page optimization, JSON-LD schema implementation, and search performance tracking using GSC, GA4, Semrush &amp; Ahrefs.
+              </p>
+            </div>
+            <div class="exp-card">
+              <div class="exp-top">
+                <span class="exp-role">BBA &mdash; Indus University</span>
+                <span class="exp-date">Ahmedabad</span>
+              </div>
+              <p class="exp-desc">
+                Applying business administration principles to search intent analysis, consumer research, and growth-oriented marketing decisions.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="lime-footer">
+          <span class="lime-note">Full career &amp; academic record</span>
+          <a href="resume.html" class="btn btn-sm">View Resume &rarr;</a>
+        </div>
+      </section>
+
+      <!-- 07. Tools & Tech Stack Tile -->
       <section id="stack" class="tile tile-soft span-12">
         <span class="eyebrow">Tools &amp; Tech Stack</span>
         <div class="stack-grid">
