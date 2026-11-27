@@ -540,10 +540,52 @@
 
     @media (max-width: 860px) {
       .span-8, .span-6, .span-4 { grid-column: span 12; }
-      .case-points, .stack-grid, .cap-grid { grid-template-columns: 1fr; }
+      .case-points, .stack-grid, .cap-grid, .approach-grid { grid-template-columns: 1fr; }
       .top-links a:not(.pill-cta) { display: none; }
     }
-  </style>
+  /* 5-Step Approach Grid (Step 5) */
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .approach-step {
+      background: var(--tile);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1rem 1.05rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .step-num {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      background: var(--lime);
+      border: 1px solid #bef264;
+      padding: 0.18rem 0.52rem;
+      border-radius: 999px;
+      width: fit-content;
+    }
+
+    .approach-step h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 0.98rem;
+      line-height: 1.25;
+      color: var(--ink);
+    }
+
+    .approach-step p {
+      font-size: 0.84rem;
+      color: var(--muted);
+      line-height: 1.48;
+    }
 </head>
 <body>
   <div class="bento-wrap">
