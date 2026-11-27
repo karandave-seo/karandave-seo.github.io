@@ -555,7 +555,38 @@
       text-decoration: underline;
       text-underline-offset: 3px;
     }
+.cap-card {
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, background-color 0.22s ease;
+    }
 
+    .cap-card:hover {
+      transform: translateY(-3px);
+      background-color: var(--tile);
+      box-shadow: 0 12px 26px -12px rgba(20, 33, 29, 0.14);
+      border-color: rgba(20, 33, 29, 0.24);
+    }
+
+    .cap-tag {
+      transition: transform 0.18s ease, background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+    }
+
+    .cap-tag:hover {
+      transform: translateY(-1px);
+      background-color: var(--lime);
+      border-color: #bef264;
+      color: var(--ink);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cap-card,
+      .cap-tag {
+        transition: none;
+      }
+      .cap-card:hover,
+      .cap-tag:hover {
+        transform: none;
+      }
+    }
     @media (max-width: 960px) {
       .approach-grid { grid-template-columns: repeat(2, 1fr); }
     }
